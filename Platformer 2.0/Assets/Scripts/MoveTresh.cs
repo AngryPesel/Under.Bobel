@@ -3,45 +3,34 @@ using UnityEngine;
 
 public class MoveTresh : MonoBehaviour
 {
-    public float treshSpeed = 3f;
-    public float treshSpeed_10;
-    public float treshSpeed_20;
-    public float treshSpeed_30;
-    public float treshSpeed_40;
-    public float treshSpeed_60;
-    public float treshSpeed_80;
-    public float treshSpeed_100;
+    float treshSpeed = 3f;
+    public float treshSpeed1 = 3f;
+
+    public int localScore1 = 10;
+    public int localScore2 = 20;
+    public int localScore3 = 30;
+    int koef = 30;
 
     private void Update()
     {
-        if (Player.Score >= 10)
+
+        if (Player.Score >= localScore1)
         {
-            treshSpeed = treshSpeed_10;
+            treshSpeed = treshSpeed1 * 0.9f;
         }
-        if (Player.Score >= 20)
+        if (Player.Score >= localScore2)
         {
-            treshSpeed = treshSpeed_20;
+            treshSpeed = treshSpeed1;
         }
-        if (Player.Score >= 30)
+        if (Player.Score >= localScore3)
         {
-            treshSpeed = treshSpeed_30;
+            treshSpeed = treshSpeed1 * 1.2f;
+            treshSpeed1 = treshSpeed;
         }
-        if (Player.Score >= 40)
-        {
-            treshSpeed = treshSpeed_40;
-        }
-        if (Player.Score >= 60)
-        {
-            treshSpeed = treshSpeed_60;
-        }
-        if (Player.Score >= 80)
-        {
-            treshSpeed = treshSpeed_80;
-        }
-        if (Player.Score >= 100)
-        {
-            treshSpeed = treshSpeed_100;
-        }
+
+        localScore1 = localScore1 + koef;
+        localScore2 = localScore2 + koef;
+        localScore3 = localScore3 + koef;
 
         if (transform.position.y < -6f)
             Destroy(gameObject);

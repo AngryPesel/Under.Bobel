@@ -5,23 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class RestartMenu : MonoBehaviour
 {
-    public static float BestScore;
-    public void Restart()
-    {
-        if (BestScore < Player.Score)
+    public static int BestScore;
+    public static int SummScore;
+    
+        public void Restart()
         {
-            Player.lose = false;
-            SpawnTresh.spead = 1f;
-            
-            PlayerPrefs.SetInt("saveScore", Player.Score);
-            //PlayerPrefs.Save();
-            BestScore = PlayerPrefs.GetInt("saveScore");
-            Player.Score = 0;
-        }
-        Invoke("Jopke", 0.2f);
+            SummScore += Player.Score;
+            PlayerPrefs.SetInt("ScoreSumm", SummScore);
 
-        
-    }
+            if (BestScore < Player.Score)
+            {
+                Player.lose = false;
+                SpawnTresh.spead = 1f;
+            
+                PlayerPrefs.SetInt("saveScore", Player.Score);
+                PlayerPrefs.Save();
+                BestScore = PlayerPrefs.GetInt("saveScore");
+                Player.Score = 0;
+            }
+        Invoke("Jopke", 0.2f);   
+        }
 
     void Jopke()
     {
@@ -33,6 +36,8 @@ public class RestartMenu : MonoBehaviour
 
     public void ToMenu()
     {
+        SummScore += Player.Score;
+        PlayerPrefs.SetInt("ScoreSumm", SummScore);
         Player.lose = false;
         SpawnTresh.spead = 1f;
         
@@ -40,7 +45,7 @@ public class RestartMenu : MonoBehaviour
         {
 
             PlayerPrefs.SetInt("saveScore", Player.Score);
-            //PlayerPrefs.Save();
+            PlayerPrefs.Save();
             BestScore = PlayerPrefs.GetInt("saveScore");
         }
         SceneManager.LoadScene("MainMenu");

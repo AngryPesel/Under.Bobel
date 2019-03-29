@@ -6,10 +6,18 @@ public class SpawnTresh : MonoBehaviour
     public GameObject tresh;
     public GameObject coin;
     public GameObject coin2x;
+
     public static int Score;
-    public static float spead = 1.2f;
+    public static float spead = 1.5f;
     public static float intencive = 5;
     public static float intencive2x = 10;
+
+    public float speed1 = 1.5f;
+    int n = 30;
+
+    public int Score1 = 10;
+    public int Score2 = 20;
+    public int Score3 = 30;
   
     void Start()
     {
@@ -22,25 +30,30 @@ public class SpawnTresh : MonoBehaviour
         while (!Player.lose)
         {
                 Instantiate(tresh, new Vector2(Random.Range(-2.5f, 2.5f), 6f), Quaternion.identity);
-                if (Player.Score >= 10)
+                if (Player.Score >= Score1)
                 {
-                    spead = 1.2f;
+                    spead = speed1 * 1.1f;
                     intencive = 4;
                     intencive2x = 9;
                 }
-                if (Player.Score >= 20)
+                if (Player.Score >= Score2)
                 {
-                    spead = 1.1f;
+                    spead = speed1;
                     intencive = 3;
                     intencive2x = 8;
                     
                 }
-                if (Player.Score >= 30)
+                if (Player.Score >= Score3)
                 {
-                    spead = 1f;
+                    spead = speed1 * 0.8f;
                     intencive = 2;
                     intencive2x = 7;
+                    speed1 = spead;
+                    Score1 = Score1 + n;
+                    Score2 = Score2 + n;
+                    Score3 = Score3 + n;
                 }
+
             yield return new WaitForSeconds(spead);
         }
 
