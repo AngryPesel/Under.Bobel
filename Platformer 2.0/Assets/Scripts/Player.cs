@@ -74,6 +74,7 @@ public class Player : MonoBehaviour
         CoinIn = false;
     }
     
+   
 
     
 private void Update()
@@ -81,8 +82,7 @@ private void Update()
         txt.text = "" + Score;
     }
 
-    
+ 
 
 
-   
 }

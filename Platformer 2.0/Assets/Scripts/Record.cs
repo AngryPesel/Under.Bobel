@@ -9,7 +9,8 @@ public class Record : MonoBehaviour
     public Text Summ;
     
     void Update()
-    {  
+    {
+        RestartMenu.init();
         Rec.text = "" + RestartMenu.BestScore.ToString();
         Summ.text = "" + RestartMenu.SummScore.ToString();
     }

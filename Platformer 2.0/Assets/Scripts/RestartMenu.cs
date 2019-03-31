@@ -7,20 +7,22 @@ public class RestartMenu : MonoBehaviour
 {
     public static int BestScore;
     public static int SummScore;
-    
-        public void Restart()
+
+    public static string BEST_SCORE = "saveScore";
+    public static string SUMM_SCORE = "ScoreSumm";
+
+    public void Restart()
         {
             SummScore += Player.Score;
-            PlayerPrefs.SetInt("ScoreSumm", SummScore);
+            saveScoreSum();
 
             if (BestScore < Player.Score)
             {
                 Player.lose = false;
                 SpawnTresh.spead = 1f;
-            
-                PlayerPrefs.SetInt("saveScore", Player.Score);
-                PlayerPrefs.Save();
-                BestScore = PlayerPrefs.GetInt("saveScore");
+
+            saveScore();
+            BestScore = PlayerPrefs.GetInt(BEST_SCORE);
                 Player.Score = 0;
             }
         Invoke("Jopke", 0.2f);   
@@ -37,18 +39,35 @@ public class RestartMenu : MonoBehaviour
     public void ToMenu()
     {
         SummScore += Player.Score;
-        PlayerPrefs.SetInt("ScoreSumm", SummScore);
+        saveScoreSum();
         Player.lose = false;
         SpawnTresh.spead = 1f;
         
         if (BestScore < Player.Score)
         {
-
-            PlayerPrefs.SetInt("saveScore", Player.Score);
-            PlayerPrefs.Save();
-            BestScore = PlayerPrefs.GetInt("saveScore");
+            saveScore();
+            BestScore = PlayerPrefs.GetInt(BEST_SCORE);
         }
         SceneManager.LoadScene("MainMenu");
         Player.Score = 0;
     }
+
+    void saveScore()
+    {
+        PlayerPrefs.SetInt(BEST_SCORE, Player.Score);
+        PlayerPrefs.Save();
+    }
+
+    void saveScoreSum()
+    {
+        PlayerPrefs.SetInt(SUMM_SCORE, SummScore);
+        PlayerPrefs.Save();
+    }
+
+    public static void init()
+    {
+        BestScore = PlayerPrefs.GetInt(BEST_SCORE);
+        SummScore = PlayerPrefs.GetInt(SUMM_SCORE);
+    }
+
 }
