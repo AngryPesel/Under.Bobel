@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public GameObject restart;
+    public GameObject pause;
     public float PauseTime;
     public Text txt;
     public static bool CoinIn = false;
@@ -41,6 +42,7 @@ public class Player : MonoBehaviour
             anim.SetBool("Dead", true);
             lose = true;
             restart.SetActive(true);
+            pause.SetActive(false);
             GetComponent<AudioSource>().clip = Tresh;
             GetComponent<AudioSource>().Play();
         }
