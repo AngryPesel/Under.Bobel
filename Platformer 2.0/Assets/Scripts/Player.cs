@@ -47,7 +47,6 @@ public class Player : MonoBehaviour
         else if (collision.gameObject.tag == "Coin")
         {
             anim.SetTrigger("Eat");
-
             GetComponent<AudioSource>().clip = Coin;
             GetComponent<AudioSource>().Play();
             Score++;
