@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2467511988557033965}
   - component: {fileID: 3905021385199801410}
   - component: {fileID: 7620570232383765344}
-  - component: {fileID: 5337400525420043272}
+  - component: {fileID: 3124133819878730834}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -366,7 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd637298af7da5c4488248e10ab04d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5337400525420043272
+--- !u!114 &3124133819878730834
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -380,4 +380,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LGBT_GG: {fileID: 21300000, guid: e7f9a25cba04e714fb2c86559fb41571, type: 3}
   Bobel_def: {fileID: 21300000, guid: f52d650c2a2693742974781b92dfe105, type: 3}
-  pnh: {fileID: 0}
+  CattyBobel: {fileID: 21300000, guid: 6b2dca1cccda7cc44990da1b9ecdf590, type: 3}
+  rainbow: {fileID: 0}
