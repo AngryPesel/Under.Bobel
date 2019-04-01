@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4732837949960600533}
   - component: {fileID: 2467511988557033965}
   - component: {fileID: 3905021385199801410}
+  - component: {fileID: 7620570232383765344}
   - component: {fileID: 5337400525420043272}
   m_Layer: 0
   m_Name: Player
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e7f9a25cba04e714fb2c86559fb41571, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f52d650c2a2693742974781b92dfe105, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -353,6 +354,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7620570232383765344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5337400525420043273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd637298af7da5c4488248e10ab04d62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5337400525420043272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,3 +379,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LGBT_GG: {fileID: 21300000, guid: e7f9a25cba04e714fb2c86559fb41571, type: 3}
+  Bobel_def: {fileID: 21300000, guid: f52d650c2a2693742974781b92dfe105, type: 3}
+  pnh: {fileID: 0}
