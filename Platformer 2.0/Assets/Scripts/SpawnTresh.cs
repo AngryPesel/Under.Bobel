@@ -49,8 +49,11 @@ public class SpawnTresh : MonoBehaviour
                     intencive = 2;
                     intencive2x = 7;
                     speed1 = spead;
-                    Score1 = Score1 + n;
+                    n += 10;
+                    Score1 = Score1 + n
+                    n += 10;
                     Score2 = Score2 + n;
+                    n += 10;
                     Score3 = Score3 + n;
                 }
 
