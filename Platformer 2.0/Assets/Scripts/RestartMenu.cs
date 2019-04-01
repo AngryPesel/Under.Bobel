@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-//using System;
-//using System.Text;
-
 
 public class RestartMenu : MonoBehaviour
 {
@@ -24,9 +21,8 @@ public class RestartMenu : MonoBehaviour
                 Player.lose = false;
                 SpawnTresh.spead = 1f;
 
-                saveScore();
-                BestScore = PlayerPrefs.GetInt(BEST_SCORE);
-
+            saveScore();
+            BestScore = PlayerPrefs.GetInt(BEST_SCORE);
                 Player.Score = 0;
             }
         Invoke("Jopke", 0.2f);   
@@ -44,7 +40,6 @@ public class RestartMenu : MonoBehaviour
     {
         SummScore += Player.Score;
         saveScoreSum();
-
         Player.lose = false;
         SpawnTresh.spead = 1f;
         
@@ -53,17 +48,12 @@ public class RestartMenu : MonoBehaviour
             saveScore();
             BestScore = PlayerPrefs.GetInt(BEST_SCORE);
         }
-
         SceneManager.LoadScene("MainMenu");
-
         Player.Score = 0;
     }
 
     void saveScore()
     {
-        /*byte[] bytes = Encoding.UTF8.GetBytes(JsonUtility.ToJson(BEST_SCORE));
-        string ToScore = BitConverter.ToString(bytes);*/
-
         PlayerPrefs.SetInt(BEST_SCORE, Player.Score);
         PlayerPrefs.Save();
     }
@@ -77,7 +67,6 @@ public class RestartMenu : MonoBehaviour
     public static void init()
     {
         BestScore = PlayerPrefs.GetInt(BEST_SCORE);
-
         SummScore = PlayerPrefs.GetInt(SUMM_SCORE);
     }
 

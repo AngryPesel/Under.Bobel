@@ -49,12 +49,9 @@ public class SpawnTresh : MonoBehaviour
                     intencive = 2;
                     intencive2x = 7;
                     speed1 = spead;
-                    n += 10;
-                    Score1 += n;
-                    n += 10;   
-                    Score2 += n;
-                    n += 10;
-                    Score3 += n;
+                    Score1 = Score1 + n;
+                    Score2 = Score2 + n;
+                    Score3 = Score3 + n;
                 }
 
             yield return new WaitForSeconds(spead);
@@ -66,7 +63,7 @@ public class SpawnTresh : MonoBehaviour
         while (!Player.lose)
         {
             float i= Random.Range(0f, 1f);
-            //print("random "+i);
+            print("random "+i);
             if (i > 0.5)
             {
                 Instantiate(coin, new Vector2(3f, Random.Range(-4f, 4f)), Quaternion.identity);
@@ -75,7 +72,6 @@ public class SpawnTresh : MonoBehaviour
             {
                 Instantiate(coin, new Vector2(-3f, Random.Range(-4f, 4f)), Quaternion.identity);
             }
-
             if (Player.Score >= 20)
             {
                 Instantiate(coin2x, new Vector2(Random.Range(-2f, 2f), 6f), Quaternion.identity);
