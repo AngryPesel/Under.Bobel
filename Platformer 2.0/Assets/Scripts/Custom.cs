@@ -10,19 +10,32 @@ public class Custom : MonoBehaviour
     public Sprite Bobel_def;
     public Sprite CattyBobel;
 
+    public int Ost;
+
     //public GameObject Shop;
 
     public void LGBT()
     {
-        RestartMenu.SummScore = -1000;
-        gameObject.GetComponent<SpriteRenderer>().sprite = LGBT_GG;
+        if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) >= 1000)
+        {
+            RestartMenu.SummScore -= 1000;
+            Ost = PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) - 1000;
+            PlayerPrefs.SetInt(RestartMenu.SUMM_SCORE, Ost);
+            gameObject.GetComponent<SpriteRenderer>().sprite = LGBT_GG;
+        }
     }
 
     public void Catty()
     {
-        RestartMenu.SummScore = -5000;
-        gameObject.GetComponent<SpriteRenderer>().sprite = CattyBobel;
+        if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) >= 5000)
+        {
+            RestartMenu.SummScore -= 5000;
+            Ost = PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) - 5000;
+            PlayerPrefs.SetInt(RestartMenu.SUMM_SCORE, Ost);
+            gameObject.GetComponent<SpriteRenderer>().sprite = CattyBobel;
+        }
     }
+
     public void Bobel_Defolt()
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = Bobel_def;
