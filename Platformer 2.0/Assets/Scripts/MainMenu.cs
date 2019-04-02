@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject Shop;
+
     public void PlayGame()
     {
         Player.lose = false;
@@ -18,7 +20,7 @@ public class MainMenu : MonoBehaviour
 
     public void ToShop()
     {
-        SceneManager.LoadScene("Shop");
+        Shop.SetActive(true);
     }
 
     public void ToMenu()
