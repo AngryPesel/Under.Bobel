@@ -285,4 +285,9 @@ MonoBehaviour:
   LGBT_GG: {fileID: 21300000, guid: e7f9a25cba04e714fb2c86559fb41571, type: 3}
   Bobel_def: {fileID: 21300000, guid: f52d650c2a2693742974781b92dfe105, type: 3}
   CattyBobel: {fileID: 21300000, guid: 6b2dca1cccda7cc44990da1b9ecdf590, type: 3}
-  Shop: {fileID: 2859190691907682270, guid: 46ba6590b8ca7ea46aece524b9472a93, type: 3}
+  Ost: 0
+  BuyButton_LGBT: {fileID: 2859190691907682270, guid: 46ba6590b8ca7ea46aece524b9472a93,
+    type: 3}
+  BuyButton_Catty: {fileID: 0}
+  Select_LGBT: {fileID: 0}
+  Select_Catty: {fileID: 0}

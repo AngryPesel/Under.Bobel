@@ -10,22 +10,40 @@ public class Custom : MonoBehaviour
     public Sprite Bobel_def;
     public Sprite CattyBobel;
 
+    public static string LGBT = "LGBT";
+
+    public static int Cond_LGBT = 0;
+    
     public int Ost;
 
-    //public GameObject Shop;
-
-    public void LGBT()
+    public void Buy_LGBT()
     {
-        if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) >= 1000)
+        PlayerPrefs.SetInt(LGBT, Cond_LGBT);
+        if (PlayerPrefs.GetInt(LGBT, Cond_LGBT) < 1)
         {
-            RestartMenu.SummScore -= 1000;
-            Ost = PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) - 1000;
-            PlayerPrefs.SetInt(RestartMenu.SUMM_SCORE, Ost);
-            gameObject.GetComponent<SpriteRenderer>().sprite = LGBT_GG;
+            if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) >= 1000)
+            {
+                RestartMenu.SummScore -= 1000;
+                Ost = PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) - 1000;
+                PlayerPrefs.SetInt(RestartMenu.SUMM_SCORE, Ost);
+                gameObject.GetComponent<SpriteRenderer>().sprite = LGBT_GG;
+
+                Cond_LGBT = 1;
+                PlayerPrefs.SetInt(LGBT, Cond_LGBT);
+            }
         }
+        else gameObject.GetComponent<SpriteRenderer>().sprite = LGBT_GG;
+
+
+
     }
 
-    public void Catty()
+    /*public void SelectLGBT()
+    {
+        gameObject.GetComponent<SpriteRenderer>().sprite = LGBT_GG;
+    }*/
+
+    public void Buy_Catty()
     {
         if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) >= 5000)
         {
@@ -36,7 +54,12 @@ public class Custom : MonoBehaviour
         }
     }
 
-    public void Bobel_Defolt()
+    /*public void SelectCatty()
+    {
+        gameObject.GetComponent<SpriteRenderer>().sprite = CattyBobel;
+    }*/
+
+    public void Select_Bobel_Defolt()
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = Bobel_def;
     }

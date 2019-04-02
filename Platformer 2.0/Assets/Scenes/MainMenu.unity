@@ -959,6 +959,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shop
       objectReference: {fileID: 0}
+    - target: {fileID: 2859190691907682270, guid: 46ba6590b8ca7ea46aece524b9472a93,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2859190691907682266, guid: 46ba6590b8ca7ea46aece524b9472a93,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1063,6 +1068,51 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2859190692460953080, guid: 46ba6590b8ca7ea46aece524b9472a93,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1289
+      objectReference: {fileID: 0}
+    - target: {fileID: 2859190691570259091, guid: 46ba6590b8ca7ea46aece524b9472a93,
+        type: 3}
+      propertyPath: m_Name
+      value: Select
+      objectReference: {fileID: 0}
+    - target: {fileID: 2859190691570259085, guid: 46ba6590b8ca7ea46aece524b9472a93,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Select_Bobel_Defolt
+      objectReference: {fileID: 0}
+    - target: {fileID: 2859190691523210855, guid: 46ba6590b8ca7ea46aece524b9472a93,
+        type: 3}
+      propertyPath: m_Name
+      value: Byu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2859190691523210849, guid: 46ba6590b8ca7ea46aece524b9472a93,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Buy_LGBT
+      objectReference: {fileID: 0}
+    - target: {fileID: 2859190692774084437, guid: 46ba6590b8ca7ea46aece524b9472a93,
+        type: 3}
+      propertyPath: m_Text
+      value: Buy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2859190691436003005, guid: 46ba6590b8ca7ea46aece524b9472a93,
+        type: 3}
+      propertyPath: m_Name
+      value: Buy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2859190691436003007, guid: 46ba6590b8ca7ea46aece524b9472a93,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Buy_Catty
+      objectReference: {fileID: 0}
+    - target: {fileID: 2859190691486877629, guid: 46ba6590b8ca7ea46aece524b9472a93,
+        type: 3}
+      propertyPath: m_Text
+      value: Buy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46ba6590b8ca7ea46aece524b9472a93, type: 3}
