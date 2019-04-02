@@ -25,6 +25,6 @@ public class MainMenu : MonoBehaviour
 
     public void ToMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        Shop.SetActive(false);
     }
 }

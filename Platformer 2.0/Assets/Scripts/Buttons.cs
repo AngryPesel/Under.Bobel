@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class Buttons : MonoBehaviour
 {
 
-   public void ToMenu()
+
+    public void ToMenu()
     {
         SceneManager.LoadScene("MainMenu");
     }
