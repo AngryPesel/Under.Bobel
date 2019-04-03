@@ -20,7 +20,7 @@ public class disactive : MonoBehaviour
 
         if (PlayerPrefs.GetInt(Custom.Catty) < 1)
         {
-            if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) < 1000)
+            if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) < 5000)
                 catty_butt.interactable = false;
         }
         else catty_butt.interactable = true;
