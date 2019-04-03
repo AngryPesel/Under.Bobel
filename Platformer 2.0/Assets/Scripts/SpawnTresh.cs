@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class SpawnTresh : MonoBehaviour
 {
+
     public GameObject tresh;
     public GameObject coin;
     public GameObject coin2x;

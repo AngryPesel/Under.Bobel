@@ -13,53 +13,112 @@ public class Custom : MonoBehaviour
     public static string LGBT = "LGBT";
     public static string Catty = "Catty";
 
-    public static int Cond_LGBT = 0;
-    public static int Cond_Catty = 0;
+    public static int Cond_LGBT;
+    public static int Cond_Catty;
+
+    public static string CheckLGBT = "CheckLGBT";
+    public static string CheckCatty = "CheckCatty";
+    public static string CheckBobel = "CheckBobel";
+
+    public static int Check_LGBT;
+    public static int Check_Catty;
+    public static int Check_Bobel;
 
     public int Ost;
 
+    private void Start()
+    {
+        Check_LGBT = PlayerPrefs.GetInt(CheckLGBT, Check_LGBT);
+        Check_Catty = PlayerPrefs.GetInt(CheckCatty, Check_Catty);
+        Check_Bobel = PlayerPrefs.GetInt(CheckBobel, Check_Bobel);
+    }
+
     public void Buy_LGBT()
     {
-        PlayerPrefs.SetInt(LGBT, Cond_LGBT);
         if (PlayerPrefs.GetInt(LGBT, Cond_LGBT) < 1)
         {
             if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) >= 1000)
             {
-                RestartMenu.SummScore -= 1000;
                 Ost = PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) - 1000;
                 PlayerPrefs.SetInt(RestartMenu.SUMM_SCORE, Ost);
-                gameObject.GetComponent<SpriteRenderer>().sprite = LGBT_GG;
+
+                Check_LGBT = 1;
+                Check_Catty = 0;
+                Check_Bobel = 0;
+                PlayerPrefs.SetInt(CheckLGBT, Check_LGBT);
+                PlayerPrefs.SetInt(CheckCatty, Check_Catty);
+                PlayerPrefs.SetInt(CheckBobel, Check_Bobel);
+                Check_LGBT = PlayerPrefs.GetInt(CheckLGBT);
+                Check_Catty = PlayerPrefs.GetInt(CheckCatty);
+                Check_Bobel = PlayerPrefs.GetInt(CheckBobel);
 
                 Cond_LGBT = 1;
                 PlayerPrefs.SetInt(LGBT, Cond_LGBT);
             }
         }
-        else gameObject.GetComponent<SpriteRenderer>().sprite = LGBT_GG;
+        else
+        {
+            Check_LGBT = 1;
+            Check_Catty = 0;
+            Check_Bobel = 0;
+            PlayerPrefs.SetInt(CheckLGBT, Check_LGBT);
+            PlayerPrefs.SetInt(CheckCatty, Check_Catty);
+            PlayerPrefs.SetInt(CheckBobel, Check_Bobel);
+            Check_LGBT = PlayerPrefs.GetInt(CheckLGBT);
+            Check_Catty = PlayerPrefs.GetInt(CheckCatty);
+            Check_Bobel = PlayerPrefs.GetInt(CheckBobel);
+        }
     }
 
 
     public void Buy_Catty()
     {
-        PlayerPrefs.SetInt(Catty, Cond_Catty);
         if (PlayerPrefs.GetInt(Catty, Cond_Catty) < 1)
         {
             if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) >= 5000)
             {
-                RestartMenu.SummScore -= 5000;
                 Ost = PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) - 5000;
                 PlayerPrefs.SetInt(RestartMenu.SUMM_SCORE, Ost);
-                gameObject.GetComponent<SpriteRenderer>().sprite = CattyBobel;
+
+                Check_LGBT = 0;
+                Check_Catty = 1;
+                Check_Bobel = 0;
+                PlayerPrefs.SetInt(CheckLGBT, Check_LGBT);
+                PlayerPrefs.SetInt(CheckCatty, Check_Catty);
+                PlayerPrefs.SetInt(CheckBobel, Check_Bobel);
+                Check_LGBT = PlayerPrefs.GetInt(CheckLGBT);
+                Check_Catty = PlayerPrefs.GetInt(CheckCatty);
+                Check_Bobel = PlayerPrefs.GetInt(CheckBobel);
 
                 Cond_Catty = 1;
                 PlayerPrefs.SetInt(Catty, Cond_Catty);
             }
         }
-        else gameObject.GetComponent<SpriteRenderer>().sprite = CattyBobel;
+        else
+        {
+            Check_LGBT = 0;
+            Check_Catty = 1;
+            Check_Bobel = 0;
+            PlayerPrefs.SetInt(CheckLGBT, Check_LGBT);
+            PlayerPrefs.SetInt(CheckCatty, Check_Catty);
+            PlayerPrefs.SetInt(CheckBobel, Check_Bobel);
+            Check_LGBT = PlayerPrefs.GetInt(CheckLGBT);
+            Check_Catty = PlayerPrefs.GetInt(CheckCatty);
+            Check_Bobel = PlayerPrefs.GetInt(CheckBobel);
+        }
     }
 
     public void Select_Bobel_Defolt()
     {
-        gameObject.GetComponent<SpriteRenderer>().sprite = Bobel_def;
+        Check_LGBT = 0;
+        Check_Catty = 0;
+        Check_Bobel = 1;
+        PlayerPrefs.SetInt(CheckLGBT, Check_LGBT);
+        PlayerPrefs.SetInt(CheckCatty, Check_Catty);
+        PlayerPrefs.SetInt(CheckBobel, Check_Bobel);
+        Check_LGBT = PlayerPrefs.GetInt(CheckLGBT);
+        Check_Catty = PlayerPrefs.GetInt(CheckCatty);
+        Check_Bobel = PlayerPrefs.GetInt(CheckBobel);
     }
   
 }
