@@ -40,23 +40,42 @@ public class Player : MonoBehaviour
             GetComponent<AudioSource>().clip = Tresh;
             GetComponent<AudioSource>().Play();
         }
-        else if (collision.gameObject.tag == "Coin")
+        else if (collision.gameObject.tag == "Coincup")
         {
             anim.SetTrigger("Eat");
-           
-            Score += 1;
+            Score += SpawnTresh.det;
             CoinIn = true;
             Invoke("TimeCoinIn", PauseTime);
             Destroy(collision.gameObject);
             GetComponent<AudioSource>().clip = Coin;
             GetComponent<AudioSource>().Play();
         }
-        else if (collision.gameObject.tag == "Coin2X")
+        else if (collision.gameObject.tag == "Coinsilv")
         {
             anim.SetTrigger("Eat");
             GetComponent<AudioSource>().clip = Coin;
             GetComponent<AudioSource>().Play();
-            Score += 2;
+            Score += SpawnTresh.det + 1;
+            CoinIn = true;
+            Invoke("TimeCoinIn", PauseTime);
+            Destroy(collision.gameObject);
+        }
+        else if (collision.gameObject.tag == "Coingold")
+        {
+            anim.SetTrigger("Eat");
+            GetComponent<AudioSource>().clip = Coin;
+            GetComponent<AudioSource>().Play();
+            Score += SpawnTresh.det + 2;
+            CoinIn = true;
+            Invoke("TimeCoinIn", PauseTime);
+            Destroy(collision.gameObject);
+        }
+        else if (collision.gameObject.tag == "Coinevil")
+        {
+            anim.SetTrigger("Eat");
+            GetComponent<AudioSource>().clip = Coin;
+            GetComponent<AudioSource>().Play();
+            Score -= SpawnTresh.det;
             CoinIn = true;
             Invoke("TimeCoinIn", PauseTime);
             Destroy(collision.gameObject);
