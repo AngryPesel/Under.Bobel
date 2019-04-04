@@ -39,6 +39,8 @@ public class MoveCoin : MonoBehaviour
             Destroy(gameObject);
         if (transform.position.x > 3.5f)
             Destroy(gameObject);
+        if (transform.position.y < -6f)
+            Destroy(gameObject);
         switch (side)
         {
             case Side.Left: transform.position += new Vector3(coinSpeed * Time.deltaTime, 0, 0);  break;
