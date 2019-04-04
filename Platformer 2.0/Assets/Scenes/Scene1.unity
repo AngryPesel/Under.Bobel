@@ -524,6 +524,12 @@ PrefabInstance:
       propertyPath: pause
       value: 
       objectReference: {fileID: 866038287}
+    - target: {fileID: 3124778445170120863, guid: 32c569a99b8b13f4fbce0484345b5d20,
+        type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 21928773515894779, guid: ab9ce0c1150b0ea4bae48d45edb16481,
+        type: 3}
     - target: {fileID: 1868671657691073445, guid: 32c569a99b8b13f4fbce0484345b5d20,
         type: 3}
       propertyPath: m_Enabled
@@ -649,8 +655,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tresh: {fileID: 988368903911251654, guid: 60306f70f5056434e9820a5ba90e59e3, type: 3}
-  coin: {fileID: 5912924698624459449, guid: f08a93d0441fbf34e9d1a8b46e1ff5db, type: 3}
-  coin2x: {fileID: 2058496347458835528, guid: da098ca0cf6962a409fb1d66ee0f6206, type: 3}
+  coincup: {fileID: 21928773515894779, guid: ab9ce0c1150b0ea4bae48d45edb16481, type: 3}
+  coinsilv: {fileID: 2170195886316686667, guid: f08a93d0441fbf34e9d1a8b46e1ff5db,
+    type: 3}
+  coingold: {fileID: 663820752557523422, guid: ee169c8a5e6c56247ac0e827fb139287, type: 3}
+  coinevil: {fileID: 831280206533870522, guid: 80d6e38dcb293384482672f84c527ac9, type: 3}
   speed1: 1.5
   Score1: 10
   Score2: 20
@@ -1154,5 +1163,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3577257816170020901, guid: e9223ea114f912f4c9b8f19bf8647e01,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300004, guid: e736c9466c2967749bdc995d3a25285b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9223ea114f912f4c9b8f19bf8647e01, type: 3}

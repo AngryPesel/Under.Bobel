@@ -1,7 +1,10 @@
 fileFormatVersion: 2
-guid: b17b409eb745f7c4192ca7e5f89552a2
+guid: e64437e5c96bd1247959ed660a9ddb15
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Rainbow_dead_0
+    21300002: Rainbow_dead_1
+    21300004: Rainbow_dead_2
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -40,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -137,11 +140,71 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Rainbow_dead_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 33
+        width: 412
+        height: 453
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 033ac1f24f2ed1249b1f806eb8a3a099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rainbow_dead_1
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 33
+        width: 411
+        height: 453
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a875135b429e394d81a43a517f0e363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rainbow_dead_2
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 33
+        width: 412
+        height: 453
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ad0965962bfb545a22f457da7e3ec8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 72f194339c403354dbb7053b2ca03165
+    spriteID: 470b85fa949b49344a97c4327cafa8ed
     vertices: []
     indices: 
     edges: []

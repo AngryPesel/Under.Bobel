@@ -1,7 +1,10 @@
 fileFormatVersion: 2
-guid: b17b409eb745f7c4192ca7e5f89552a2
+guid: 3a79fb6be798eba40ab1562ed9ef79d2
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Catty_death_0
+    21300002: Catty_death_1
+    21300004: Catty_death_2
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -40,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -137,11 +140,71 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Catty_death_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 35
+        width: 411
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a05cec9569241dc4c844758aa427bd27
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Catty_death_1
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 35
+        width: 411
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee4e60afc9088fb45bd1249ee09bf1e4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Catty_death_2
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 35
+        width: 411
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ff1a085834a7145b1e6082dff59137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 72f194339c403354dbb7053b2ca03165
+    spriteID: 9329c5295f3df9b4db658b630549d936
     vertices: []
     indices: 
     edges: []

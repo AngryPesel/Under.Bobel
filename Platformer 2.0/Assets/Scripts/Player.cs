@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 {
     public GameObject restart;
     public GameObject pause;
-    public GameObject coin;
+    
 
     public float PauseTime;
     public Text txt;

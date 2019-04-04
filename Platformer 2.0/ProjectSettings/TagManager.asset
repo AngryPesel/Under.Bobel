@@ -7,6 +7,10 @@ TagManager:
   - Tresh
   - Coin
   - Coin2X
+  - Coincup
+  - Coinsilv
+  - Coingold
+  - Coinevil
   layers:
   - Default
   - TransparentFX
