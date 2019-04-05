@@ -96,12 +96,18 @@ public class SpawnTresh : MonoBehaviour
                 scr += 5 * numm;
                 numm += 20;
                 det += 1;
+                timeCup -= 1f;
+                timeSilv -= 0.5f;
+                timeGold -= 0.2f;
+                timeEvil -= 0.1f;
             }
             if (Player.lose)
             {
                 StopAllCoroutines();
             }
-        }else{
+        }
+        else
+        {
             timeCup = 0;
             timeSilv = 0;
             timeGold = 0;
@@ -138,103 +144,6 @@ public class SpawnTresh : MonoBehaviour
             yield return new WaitForSeconds(spead);
         }
 
-    }
-    IEnumerator SpawnCoinCUP()
-    {
-       /* while (!Player.lose)
-        {
-            Debug.Log("SpawnCoinCUP");
-            Debug.Log("scr");
-            Debug.Log(scr);
-            Debug.Log("numm");
-            Debug.Log(numm);
-            if (Player.Score >= scr)
-            {*/
-                createCoinCup();
-                yield return new WaitForSeconds(UnityEngine.Random.Range(1, intenciveCup));
-           // }
-        //}
-    }
-
-    IEnumerator SpawnCoin()
-    {
-        while (!Player.lose)
-        {
-            Debug.Log("SpawnCoinCUP");
-            Debug.Log("scr");
-            Debug.Log(scr);
-            Debug.Log("numm");
-            Debug.Log(numm);
-            if (Player.Score >= scr)
-            {
-                //  createCoinCup();
-                StartCoroutine(SpawnCoinCUP());
-
-            }
-            if (Player.Score >= scr + numm)
-            {
-                StartCoroutine(SpawnCoinSILV());
-            }
-            if (Player.Score >= scr + numm * 2)
-            {
-                StartCoroutine(SpawnCoinGOLD());
-            }
-            if (Player.Score >= scr + numm * 3)
-            {
-                StartCoroutine(SpawnCoinEVIL());
-            }
-            yield return new WaitForSeconds(UnityEngine.Random.Range(1, intenciveCup));
-        }
-    }
-
-
-    IEnumerator SpawnCoinSILV()
-    {
-        /*while (!Player.lose)
-        {
-            Debug.Log("SpawnCoinSILV");
-            Debug.Log("scr");
-            Debug.Log(scr);
-            Debug.Log("numm");
-            Debug.Log(numm);
-            if (Player.Score >= scr+numm)
-            {*/
-                createCoinSILV();
-                yield return new WaitForSeconds(UnityEngine.Random.Range(1, intenciveSilv));
-            //}
-        //}
-    }
-    IEnumerator SpawnCoinGOLD()
-    {
-       /* while (Player.lose)
-        {
-            Debug.Log("SpawnCoinGOLD");
-            Debug.Log("scr");
-            Debug.Log(scr);
-            Debug.Log("numm");
-            Debug.Log(numm);
-            if (Player.Score >= scr+numm*2)
-            {*/
-                createCoinGold();
-                yield return new WaitForSeconds(UnityEngine.Random.Range(1, intenciveGold));
-           // }
-        //}
-    }
-    IEnumerator SpawnCoinEVIL()
-    {
-        /*while (Player.lose)
-        {
-            Debug.Log("SpawnCoinEVIL");
-            Debug.Log("scr");
-            Debug.Log(scr);
-            Debug.Log("numm");
-            Debug.Log(numm);
-            if (Player.Score >= scr+numm*3)
-            {*/
-                createCoinEVIL();
-                yield return new WaitForSeconds(UnityEngine.Random.Range(1, intenciveCup));
-           // }
-        //}
     }
 
     void createCoinCup()
