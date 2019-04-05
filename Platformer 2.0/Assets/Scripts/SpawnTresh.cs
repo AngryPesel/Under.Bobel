@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class SpawnTresh : MonoBehaviour
@@ -21,6 +22,12 @@ public class SpawnTresh : MonoBehaviour
     public static float intenciveGold = 9f;
     public static float intenciveEvil = 5f;
 
+    private static float timeCup = 0;
+    private static float timeSilv = 0;
+    private static float timeGold = 0;
+    private static float timeEvil = 0;
+    private static float time = 0;
+
     public float speed1 = 1.5f;
     int n = 30;
     int scr = 0;
@@ -37,54 +44,52 @@ public class SpawnTresh : MonoBehaviour
         int scr = 0;
         int numm = 20;
         int k = 20;
+        timeCup = intenciveCup;
+        timeSilv = intenciveSilv;
+        timeGold = intenciveGold;
+        timeEvil = intenciveEvil;
 
-        StartCoroutine(SpawnTrash());
-        StartCoroutine(SpawnCoinCUP());
+    StartCoroutine(SpawnTrash());
+      //  StartCoroutine(SpawnCoin());
+        /*StartCoroutine(SpawnCoinCUP());
+        StartCoroutine(SpawnCoinSILV());
+        StartCoroutine(SpawnCoinGOLD());
+        StartCoroutine(SpawnCoinEVIL());*/
     }
 
     private void Update()
     {
-        while (!Player.lose)
+
+        //StartCoroutine(SpawnCoinCUP());
+        if (!Player.lose)
         {
-            StopAllCoroutines();
-        }
+            time += Time.deltaTime;
+            if (time > timeCup)
+            {
+                createCoinCup();
+                timeCup = time + UnityEngine.Random.Range(1, intenciveCup);
+            }
             if (Player.Score >= (scr + numm))
-                if (Time.time > SpawnSilv)
+                if (time > timeSilv)
                 {
-                    int i = Random.Range(1, 4);
-                    if (i == 1)
-                        Instantiate(coinsilv, new Vector2(3f, Random.Range(-4f, 4f)), Quaternion.identity);
-                    else if (i == 2)
-                        Instantiate(coinsilv, new Vector2(-3f, Random.Range(-4f, 4f)), Quaternion.identity);
-                    else if (i == 3)
-                        Instantiate(coinsilv, new Vector2(Random.Range(-2.5f, 2.5f), 6f), Quaternion.identity);
-                    SpawnSilv += Random.Range(1f, intenciveSilv);
+
+                    createCoinSILV();
+                    timeSilv = time + UnityEngine.Random.Range(1, intenciveSilv);
                 }
 
-            if (Player.Score >= (scr + 2 * numm))
-                if (Time.time > SpawnGold)
+            if (Player.Score >= (scr + numm * 2))
+                if (time > timeGold)
                 {
-                    int i = Random.Range(1, 4);
-                    if (i == 1)
-                        Instantiate(coingold, new Vector2(3f, Random.Range(-4f, 4f)), Quaternion.identity);
-                    else if (i == 2)
-                        Instantiate(coingold, new Vector2(-3f, Random.Range(-4f, 4f)), Quaternion.identity);
-                    else if (i == 3)
-                        Instantiate(coingold, new Vector2(Random.Range(-2.5f, 2.5f), 6f), Quaternion.identity);
-                    SpawnGold += Random.Range(1f, intenciveGold);
+                    createCoinGold();
+                    timeGold = time + UnityEngine.Random.Range(1, intenciveGold);
                 }
 
-            if (Player.Score >= (scr + 3 * numm))
-                if (Time.time > SpawnEvil)
+            if (Player.Score >= (scr + numm * 3))
+                if (time > timeEvil)
                 {
-                    int i = Random.Range(1, 4);
-                    if (i == 1)
-                        Instantiate(coinevil, new Vector2(3f, Random.Range(-4f, 4f)), Quaternion.identity);
-                    else if (i == 2)
-                        Instantiate(coinevil, new Vector2(-3f, Random.Range(-4f, 4f)), Quaternion.identity);
-                    else if (i == 3)
-                        Instantiate(coinsilv, new Vector2(Random.Range(-2.5f, 2.5f), 6f), Quaternion.identity);
-                    SpawnEvil += Random.Range(1f, intenciveEvil);
+                    createCoinEVIL();
+                    timeEvil = time + UnityEngine.Random.Range(1, intenciveEvil);
+
                 }
             if (Player.Score > (scr + 4 * numm + 20))
             {
@@ -92,14 +97,25 @@ public class SpawnTresh : MonoBehaviour
                 numm += 20;
                 det += 1;
             }
-        
+            if (Player.lose)
+            {
+                StopAllCoroutines();
+            }
+        }else{
+            timeCup = 0;
+            timeSilv = 0;
+            timeGold = 0;
+            timeEvil = 0;
+            time = 0;
+        }
+
     }
 
     IEnumerator SpawnTrash()
     {
         while (!Player.lose)
         {
-            Instantiate(tresh, new Vector2(Random.Range(-2.5f, 2.5f), 6f), Quaternion.identity);
+            Instantiate(tresh, new Vector2(UnityEngine.Random.Range(-2.5f, 2.5f), 6f), Quaternion.identity);
             if (Player.Score >= Score1)
             {
                 spead = speed1 * 1.02f;
@@ -125,20 +141,144 @@ public class SpawnTresh : MonoBehaviour
     }
     IEnumerator SpawnCoinCUP()
     {
+       /* while (!Player.lose)
+        {
+            Debug.Log("SpawnCoinCUP");
+            Debug.Log("scr");
+            Debug.Log(scr);
+            Debug.Log("numm");
+            Debug.Log(numm);
+            if (Player.Score >= scr)
+            {*/
+                createCoinCup();
+                yield return new WaitForSeconds(UnityEngine.Random.Range(1, intenciveCup));
+           // }
+        //}
+    }
+
+    IEnumerator SpawnCoin()
+    {
         while (!Player.lose)
         {
+            Debug.Log("SpawnCoinCUP");
+            Debug.Log("scr");
+            Debug.Log(scr);
+            Debug.Log("numm");
+            Debug.Log(numm);
             if (Player.Score >= scr)
             {
-                int i = Random.Range(1, 4);
-                if (i == 1)
-                    Instantiate(coincup, new Vector2(3f, Random.Range(-4f, 4f)), Quaternion.identity);
-                else if (i == 2)
-                    Instantiate(coincup, new Vector2(-3f, Random.Range(-4f, 4f)), Quaternion.identity);
-                else if (i == 3)
-                    Instantiate(coincup, new Vector2(Random.Range(-2.5f, 2.5f), 6f), Quaternion.identity);
-                yield return new WaitForSeconds(Random.Range(1, intenciveCup));
+                //  createCoinCup();
+                StartCoroutine(SpawnCoinCUP());
+
             }
+            if (Player.Score >= scr + numm)
+            {
+                StartCoroutine(SpawnCoinSILV());
+            }
+            if (Player.Score >= scr + numm * 2)
+            {
+                StartCoroutine(SpawnCoinGOLD());
+            }
+            if (Player.Score >= scr + numm * 3)
+            {
+                StartCoroutine(SpawnCoinEVIL());
+            }
+            yield return new WaitForSeconds(UnityEngine.Random.Range(1, intenciveCup));
         }
     }
-    
+
+
+    IEnumerator SpawnCoinSILV()
+    {
+        /*while (!Player.lose)
+        {
+            Debug.Log("SpawnCoinSILV");
+            Debug.Log("scr");
+            Debug.Log(scr);
+            Debug.Log("numm");
+            Debug.Log(numm);
+            if (Player.Score >= scr+numm)
+            {*/
+                createCoinSILV();
+                yield return new WaitForSeconds(UnityEngine.Random.Range(1, intenciveSilv));
+            //}
+        //}
+    }
+    IEnumerator SpawnCoinGOLD()
+    {
+       /* while (Player.lose)
+        {
+            Debug.Log("SpawnCoinGOLD");
+            Debug.Log("scr");
+            Debug.Log(scr);
+            Debug.Log("numm");
+            Debug.Log(numm);
+            if (Player.Score >= scr+numm*2)
+            {*/
+                createCoinGold();
+                yield return new WaitForSeconds(UnityEngine.Random.Range(1, intenciveGold));
+           // }
+        //}
+    }
+    IEnumerator SpawnCoinEVIL()
+    {
+        /*while (Player.lose)
+        {
+            Debug.Log("SpawnCoinEVIL");
+            Debug.Log("scr");
+            Debug.Log(scr);
+            Debug.Log("numm");
+            Debug.Log(numm);
+            if (Player.Score >= scr+numm*3)
+            {*/
+                createCoinEVIL();
+                yield return new WaitForSeconds(UnityEngine.Random.Range(1, intenciveCup));
+           // }
+        //}
+    }
+
+    void createCoinCup()
+    {
+        int i = UnityEngine.Random.Range(1, 4);
+        if (i == 1)
+            Instantiate(coincup, new Vector2(3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
+        else if (i == 2)
+            Instantiate(coincup, new Vector2(-3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
+        else if (i == 3)
+            Instantiate(coincup, new Vector2(UnityEngine.Random.Range(-2.5f, 2.5f), 6f), Quaternion.identity);
+    }
+
+    void createCoinSILV()
+    {
+        int i = UnityEngine.Random.Range(1, 4);
+        if (i == 1)
+            Instantiate(coinsilv, new Vector2(3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
+        else if (i == 2)
+            Instantiate(coinsilv, new Vector2(-3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
+        else if (i == 3)
+            Instantiate(coinsilv, new Vector2(UnityEngine.Random.Range(-2.5f, 2.5f), 6f), Quaternion.identity);
+    }
+
+    void createCoinGold()
+    {
+        int i = UnityEngine.Random.Range(1, 4);
+        if (i == 1)
+            Instantiate(coingold, new Vector2(3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
+        else if (i == 2)
+            Instantiate(coingold, new Vector2(-3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
+        else if (i == 3)
+            Instantiate(coingold, new Vector2(UnityEngine.Random.Range(-2.5f, 2.5f), 6f), Quaternion.identity);
+    }
+
+    void createCoinEVIL()
+    {
+        int i = UnityEngine.Random.Range(1, 4);
+        if (i == 1)
+            Instantiate(coinevil, new Vector2(3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
+        else if (i == 2)
+            Instantiate(coinevil, new Vector2(-3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
+        else if (i == 3)
+            Instantiate(coinevil, new Vector2(UnityEngine.Random.Range(-2.5f, 2.5f), 6f), Quaternion.identity);
+    }
+
 }
