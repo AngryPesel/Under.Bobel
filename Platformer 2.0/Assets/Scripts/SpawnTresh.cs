@@ -14,6 +14,7 @@ public class SpawnTresh : MonoBehaviour
     public GameObject coinsilv;
     public GameObject coingold;
     public GameObject coinevil;
+    public GameObject Shild;
 
     public static int Score;
     public static float spead = 1.5f;
@@ -27,6 +28,7 @@ public class SpawnTresh : MonoBehaviour
     private static float timeGold = 0;
     private static float timeEvil = 0;
     private static float time = 0;
+    private static float timeShild = 20f;
 
     public float speed1 = 1.5f;
     int n = 30;
@@ -41,13 +43,15 @@ public class SpawnTresh : MonoBehaviour
 
     void Start()
     {
-        int scr = 0;
-        int numm = 20;
-        int k = 20;
+        scr = 0;
+        numm = 20;
+        k = 20;
+        det = 1;
         timeCup = intenciveCup;
         timeSilv = intenciveSilv;
         timeGold = intenciveGold;
         timeEvil = intenciveEvil;
+        timeShild = 20f;
 
     StartCoroutine(SpawnTrash());
       //  StartCoroutine(SpawnCoin());
@@ -101,6 +105,14 @@ public class SpawnTresh : MonoBehaviour
                 timeGold -= 0.2f;
                 timeEvil -= 0.1f;
             }
+            if (Player.Score >= 10)
+            {
+                if (time > timeShild)
+                {
+                    createCoinSHILD();
+                    timeShild = time + UnityEngine.Random.Range(1, 30f);
+                }
+            }
             if (Player.lose)
             {
                 StopAllCoroutines();
@@ -113,8 +125,7 @@ public class SpawnTresh : MonoBehaviour
             timeGold = 0;
             timeEvil = 0;
             time = 0;
-        }
-
+        }       
     }
 
     IEnumerator SpawnTrash()
@@ -190,4 +201,14 @@ public class SpawnTresh : MonoBehaviour
             Instantiate(coinevil, new Vector2(UnityEngine.Random.Range(-2.5f, 2.5f), 6f), Quaternion.identity);
     }
 
+    void createCoinSHILD()
+    {
+        int i = UnityEngine.Random.Range(1, 4);
+        if (i == 1)
+            Instantiate(Shild, new Vector2(3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
+        else if (i == 2)
+            Instantiate(Shild, new Vector2(-3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
+        else if (i == 3)
+            Instantiate(Shild, new Vector2(UnityEngine.Random.Range(-2.5f, 2.5f), 6f), Quaternion.identity);
+    }
 }

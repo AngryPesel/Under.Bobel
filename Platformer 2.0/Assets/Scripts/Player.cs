@@ -7,7 +7,9 @@ public class Player : MonoBehaviour
 {
     public GameObject restart;
     public GameObject pause;
-    
+    public GameObject Shild;
+
+    public static bool ShildAct = false;
 
     public float PauseTime;
     public Text txt;
@@ -25,6 +27,7 @@ public class Player : MonoBehaviour
     {
         lose = false;
         CoinIn = false;
+        ShildAct = false;
         anim = GetComponent<Animator>();
         CoinUI = GetComponent<Animator>();
     }
@@ -33,12 +36,19 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "Tresh")
         {
-            anim.SetBool("Dead", true);
-            lose = true;
-            restart.SetActive(true);
-            pause.SetActive(false);
-            GetComponent<AudioSource>().clip = Tresh;
-            GetComponent<AudioSource>().Play();
+            if (!ShildAct)
+            {
+                anim.SetBool("Dead", true);
+                lose = true;
+                restart.SetActive(true);
+                pause.SetActive(false);
+                GetComponent<AudioSource>().clip = Tresh;
+                GetComponent<AudioSource>().Play();
+            }
+            else
+            {
+                Destroy(collision.gameObject);                    
+            };
         }
         else if (collision.gameObject.tag == "Coincup")
         {
@@ -80,6 +90,13 @@ public class Player : MonoBehaviour
             Invoke("TimeCoinIn", PauseTime);
             Destroy(collision.gameObject);
         }
+        else if (collision.gameObject.tag == "Shild")
+        {
+            //Audio
+            Destroy(collision.gameObject);
+            Shild.SetActive(true);
+            ShildAct = true;
+        }
     }
 
    void TimeCoinIn()
@@ -90,6 +107,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         txt.text = "" + Score;
+        Debug.Log(ShildAct);
     }
 
  
