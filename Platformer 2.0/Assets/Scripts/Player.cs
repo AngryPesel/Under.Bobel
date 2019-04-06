@@ -22,6 +22,9 @@ public class Player : MonoBehaviour
 
     public AudioClip Tresh;
     public AudioClip Coin;
+    public AudioClip CoinEvil;
+    public AudioClip ShildActive;
+    public AudioClip brocenGlass;
 
     private void Start()
     {
@@ -47,8 +50,10 @@ public class Player : MonoBehaviour
             }
             else
             {
-                Destroy(collision.gameObject);                    
-            };
+                Destroy(collision.gameObject);
+                GetComponent<AudioSource>().clip = brocenGlass;
+                GetComponent<AudioSource>().Play();
+            }
         }
         else if (collision.gameObject.tag == "Coincup")
         {
@@ -83,7 +88,7 @@ public class Player : MonoBehaviour
         else if (collision.gameObject.tag == "Coinevil")
         {
             anim.SetTrigger("Eat");
-            GetComponent<AudioSource>().clip = Coin;
+            GetComponent<AudioSource>().clip = CoinEvil;
             GetComponent<AudioSource>().Play();
             Score -= SpawnTresh.det;
             CoinIn = true;
@@ -92,7 +97,8 @@ public class Player : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Shild")
         {
-            //Audio
+            GetComponent<AudioSource>().clip = ShildActive;
+            GetComponent<AudioSource>().Play();
             Destroy(collision.gameObject);
             Shild.SetActive(true);
             ShildAct = true;

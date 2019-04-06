@@ -36,6 +36,7 @@ public class SpawnTresh : MonoBehaviour
     int numm = 10;
     int k = 20;
     public static int det = 1;
+    int bonus;
 
     public int Score1 = 10;
     public int Score2 = 20;
@@ -43,6 +44,7 @@ public class SpawnTresh : MonoBehaviour
 
     void Start()
     {
+        bonus = 0;
         scr = 0;
         numm = 10;
         k = 20;
@@ -106,13 +108,14 @@ public class SpawnTresh : MonoBehaviour
                 timeSilv -= 0.5f;
                 timeGold -= 0.2f;
                 timeEvil -= 0.1f;
+                bonus++;
             }
-            if (Player.Score >= 100)
+            if (bonus > 0)
             {
                 if (time > timeShild)
                 {
                     createCoinSHILD();
-                    timeShild = time + UnityEngine.Random.Range(30f, 60f);
+                    timeShild = time + UnityEngine.Random.Range(20f, 60f);
                 }
             }
             if (Player.lose)

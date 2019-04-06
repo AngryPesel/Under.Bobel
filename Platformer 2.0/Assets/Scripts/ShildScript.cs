@@ -6,7 +6,9 @@ public class ShildScript : MonoBehaviour
 {
     public GameObject Shild;
 
-    float timeShild = 5f;
+    public AudioClip shildDisable;
+
+    float timeShild = 8f;
 
     void Start()
     {
@@ -18,9 +20,11 @@ public class ShildScript : MonoBehaviour
         timeShild -= Time.deltaTime;
         if (timeShild <= 0)
         {
+            /*GetComponent<AudioSource>().clip = shildDisable;
+            GetComponent<AudioSource>().Play();*/
             Shild.SetActive(false);
             Player.ShildAct = false;
-            timeShild = 5f;
+            timeShild = 8f;
         }
     }
 }
