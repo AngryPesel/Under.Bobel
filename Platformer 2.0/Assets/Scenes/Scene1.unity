@@ -530,6 +530,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21928773515894779, guid: ab9ce0c1150b0ea4bae48d45edb16481,
         type: 3}
+    - target: {fileID: 3124778445170120863, guid: 32c569a99b8b13f4fbce0484345b5d20,
+        type: 3}
+      propertyPath: Shild
+      value: 
+      objectReference: {fileID: 1213878999}
     - target: {fileID: 1868671657691073445, guid: 32c569a99b8b13f4fbce0484345b5d20,
         type: 3}
       propertyPath: m_Enabled
@@ -558,13 +563,14 @@ GameObject:
   - component: {fileID: 1213879000}
   - component: {fileID: 1213879002}
   - component: {fileID: 1213879001}
+  - component: {fileID: 1213879003}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1213879000
 Transform:
   m_ObjectHideFlags: 0
@@ -643,6 +649,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1213879003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213878999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6608c85327761f40a3cd5695b7ec09f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shild: {fileID: 1213878999}
 --- !u!114 &1337932464 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3052766529330494483, guid: 0e35e3dd6ddb4bf40a5eb0cbe9860b0e,
@@ -756,6 +775,7 @@ MonoBehaviour:
     type: 3}
   coingold: {fileID: 663820752557523422, guid: ee169c8a5e6c56247ac0e827fb139287, type: 3}
   coinevil: {fileID: 831280206533870522, guid: 80d6e38dcb293384482672f84c527ac9, type: 3}
+  Shild: {fileID: 6703936400049961363, guid: e909a4ec4a2075541bf53fd786eb4517, type: 3}
   speed1: 1.5
   Score1: 10
   Score2: 20

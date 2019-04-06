@@ -33,7 +33,7 @@ public class SpawnTresh : MonoBehaviour
     public float speed1 = 1.5f;
     int n = 30;
     int scr = 0;
-    int numm = 20;
+    int numm = 10;
     int k = 20;
     public static int det = 1;
 
@@ -44,7 +44,7 @@ public class SpawnTresh : MonoBehaviour
     void Start()
     {
         scr = 0;
-        numm = 20;
+        numm = 10;
         k = 20;
         det = 1;
         timeCup = intenciveCup;
@@ -52,6 +52,8 @@ public class SpawnTresh : MonoBehaviour
         timeGold = intenciveGold;
         timeEvil = intenciveEvil;
         timeShild = 20f;
+
+        spead = 1.5f;
 
     StartCoroutine(SpawnTrash());
       //  StartCoroutine(SpawnCoin());
@@ -81,21 +83,21 @@ public class SpawnTresh : MonoBehaviour
                     timeSilv = time + UnityEngine.Random.Range(1, intenciveSilv);
                 }
 
-            if (Player.Score >= (scr + numm * 2))
+            if (Player.Score >= (scr + numm * 3))
                 if (time > timeGold)
                 {
                     createCoinGold();
                     timeGold = time + UnityEngine.Random.Range(1, intenciveGold);
                 }
 
-            if (Player.Score >= (scr + numm * 3))
+            if (Player.Score >= (scr + numm * 6))
                 if (time > timeEvil)
                 {
                     createCoinEVIL();
                     timeEvil = time + UnityEngine.Random.Range(1, intenciveEvil);
 
                 }
-            if (Player.Score > (scr + 4 * numm + 20))
+            if (Player.Score > (scr + 6 * numm + 40))
             {
                 scr += 5 * numm;
                 numm += 20;
@@ -105,12 +107,12 @@ public class SpawnTresh : MonoBehaviour
                 timeGold -= 0.2f;
                 timeEvil -= 0.1f;
             }
-            if (Player.Score >= 10)
+            if (Player.Score >= 100)
             {
                 if (time > timeShild)
                 {
                     createCoinSHILD();
-                    timeShild = time + UnityEngine.Random.Range(1, 30f);
+                    timeShild = time + UnityEngine.Random.Range(30f, 60f);
                 }
             }
             if (Player.lose)
