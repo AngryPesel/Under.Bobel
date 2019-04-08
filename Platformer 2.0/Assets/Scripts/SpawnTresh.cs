@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SpawnTresh : MonoBehaviour
 {
-    private float SpawnCup = 0.0f;
+    /*private float SpawnCup = 0.0f;
     private float SpawnSilv = 0.0f;
     private float SpawnGold = 0.0f;
-    private float SpawnEvil = 0.0f;
+    private float SpawnEvil = 0.0f;*/
 
     public GameObject tresh;
     public GameObject coincup;
@@ -16,6 +16,7 @@ public class SpawnTresh : MonoBehaviour
     public GameObject coinevil;
     public GameObject Shild;
     public GameObject SpeedUP;
+    public GameObject Gem;
 
     public static int Score;
     public static float spead = 3f;
@@ -31,6 +32,7 @@ public class SpawnTresh : MonoBehaviour
     private static float time = 0;
     private static float timeShild = 20f;
     private static float timeSpeedUP = 30f;
+    private static float timeGem = 50f;
 
     public float speed1 = 3f;
     int n = 30;
@@ -59,7 +61,7 @@ public class SpawnTresh : MonoBehaviour
 
         spead = 3f;
 
-    StartCoroutine(SpawnTrash());
+        StartCoroutine(SpawnTrash());
       //  StartCoroutine(SpawnCoin());
         /*StartCoroutine(SpawnCoinCUP());
         StartCoroutine(SpawnCoinSILV());
@@ -69,8 +71,6 @@ public class SpawnTresh : MonoBehaviour
 
     private void Update()
     {
-
-        //StartCoroutine(SpawnCoinCUP());
         if (!Player.lose)
         {
             time += Time.deltaTime;
@@ -120,12 +120,20 @@ public class SpawnTresh : MonoBehaviour
                     timeShild = time + UnityEngine.Random.Range(20f, 60f);
                 }
             }
-            if (bonus > 0)
+            if (bonus > 1)
             {
-                if (time > timeShild)
+                if (time > timeSpeedUP)
                 {
                     createSpeedUP();
                     timeSpeedUP = time + UnityEngine.Random.Range(20f, 60f);
+                }
+            }
+            if (Player.Score > 100)
+            {
+                if (time > timeSpeedUP)
+                {
+                    createGem();
+                    timeGem = time + UnityEngine.Random.Range(20f, 60f);
                 }
             }
             if (Player.lose)
@@ -236,5 +244,16 @@ public class SpawnTresh : MonoBehaviour
             Instantiate(SpeedUP, new Vector2(-3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
         else if (i == 3)
             Instantiate(SpeedUP, new Vector2(UnityEngine.Random.Range(-2.5f, 2.5f), 6f), Quaternion.identity);
+    }
+
+    void createGem()
+    {
+        int i = UnityEngine.Random.Range(1, 4);
+        if (i == 1)
+            Instantiate(Gem, new Vector2(3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
+        else if (i == 2)
+            Instantiate(Gem, new Vector2(-3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
+        else if (i == 3)
+            Instantiate(Gem, new Vector2(UnityEngine.Random.Range(-2.5f, 2.5f), 6f), Quaternion.identity);
     }
 }
