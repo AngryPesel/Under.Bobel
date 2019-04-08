@@ -120,14 +120,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eda2dd236bac6d44b1e92a8b6c5a6f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  treshSpeed: 3
-  treshSpeed_10: 3.5
-  treshSpeed_20: 4
-  treshSpeed_30: 4.5
-  treshSpeed_40: 5
-  treshSpeed_60: 6
-  treshSpeed_80: 7
-  treshSpeed_100: 8
+  treshSpeed1: 3
+  localScore1: 20
+  localScore2: 40
+  localScore3: 60
 --- !u!95 &4394178148356417514
 Animator:
   serializedVersion: 3

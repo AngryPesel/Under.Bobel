@@ -3,7 +3,29 @@
 public class PlayerControl : MonoBehaviour
 {
     public Transform player;
-    public float speed = 10f;
+    public static float speed;
+
+    float timeSpeedUP = 5f;
+
+    private void Start()
+    {
+        speed = 15f;
+    }
+
+    private void Update()
+    {
+        if (Player.speedUP == true)
+        {
+            timeSpeedUP -= Time.deltaTime;
+            if (timeSpeedUP <= 0)
+            {
+
+                speed = 15f;
+                Player.speedUP = false;
+                timeSpeedUP = 5f;
+            }
+        }
+    }
 
     void OnMouseDrag()
     {

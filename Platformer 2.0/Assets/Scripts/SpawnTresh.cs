@@ -15,9 +15,10 @@ public class SpawnTresh : MonoBehaviour
     public GameObject coingold;
     public GameObject coinevil;
     public GameObject Shild;
+    public GameObject SpeedUP;
 
     public static int Score;
-    public static float spead = 1.5f;
+    public static float spead = 3f;
     public static float intenciveCup = 5f;
     public static float intenciveSilv = 7f;
     public static float intenciveGold = 9f;
@@ -29,8 +30,9 @@ public class SpawnTresh : MonoBehaviour
     private static float timeEvil = 0;
     private static float time = 0;
     private static float timeShild = 20f;
+    private static float timeSpeedUP = 30f;
 
-    public float speed1 = 1.5f;
+    public float speed1 = 3f;
     int n = 30;
     int scr = 0;
     int numm = 10;
@@ -55,7 +57,7 @@ public class SpawnTresh : MonoBehaviour
         timeEvil = intenciveEvil;
         timeShild = 20f;
 
-        spead = 1.5f;
+        spead = 3f;
 
     StartCoroutine(SpawnTrash());
       //  StartCoroutine(SpawnCoin());
@@ -118,6 +120,14 @@ public class SpawnTresh : MonoBehaviour
                     timeShild = time + UnityEngine.Random.Range(20f, 60f);
                 }
             }
+            if (bonus > 0)
+            {
+                if (time > timeShild)
+                {
+                    createSpeedUP();
+                    timeSpeedUP = time + UnityEngine.Random.Range(20f, 60f);
+                }
+            }
             if (Player.lose)
             {
                 StopAllCoroutines();
@@ -148,13 +158,13 @@ public class SpawnTresh : MonoBehaviour
             }
             if (Player.Score >= Score3)
             {
-                spead = speed1 * 1.05f;
+                spead = speed1 * 0.98f;
                 speed1 = spead;
                 n += 10;
                 Score1 = Score1 + n;
-                n += 10;
+                n += 20;
                 Score2 = Score2 + n;
-                n += 10;
+                n += 30;
                 Score3 = Score3 + n;
             }
             yield return new WaitForSeconds(spead);
@@ -215,5 +225,16 @@ public class SpawnTresh : MonoBehaviour
             Instantiate(Shild, new Vector2(-3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
         else if (i == 3)
             Instantiate(Shild, new Vector2(UnityEngine.Random.Range(-2.5f, 2.5f), 6f), Quaternion.identity);
+    }
+
+    void createSpeedUP()
+    {
+        int i = UnityEngine.Random.Range(1, 4);
+        if (i == 1)
+            Instantiate(SpeedUP, new Vector2(3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
+        else if (i == 2)
+            Instantiate(SpeedUP, new Vector2(-3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
+        else if (i == 3)
+            Instantiate(SpeedUP, new Vector2(UnityEngine.Random.Range(-2.5f, 2.5f), 6f), Quaternion.identity);
     }
 }

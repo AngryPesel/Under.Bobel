@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     public static bool CoinIn = false;
     public static bool lose = false;
     public static int Score = 0;
+    public static bool speedUP = false;
 
     private Animator anim;
     public Animator CoinUI;
@@ -26,11 +27,15 @@ public class Player : MonoBehaviour
     public AudioClip ShildActive;
     public AudioClip brocenGlass;
 
+    /*float timeSpeedUP = 8;*/
+
     private void Start()
     {
         lose = false;
         CoinIn = false;
         ShildAct = false;
+        speedUP = false;
+
         anim = GetComponent<Animator>();
         CoinUI = GetComponent<Animator>();
     }
@@ -103,12 +108,27 @@ public class Player : MonoBehaviour
             Shild.SetActive(true);
             ShildAct = true;
         }
+        else if (collision.gameObject.tag == "SpeedUP")
+        {
+            Destroy(collision.gameObject);
+            PlayerControl.speed = 1000f;
+            speedUP = true;
+        }
     }
 
    void TimeCoinIn()
     {
         CoinIn = false;
     }
+
+    /*void SpeedUP()
+    {
+        timeSpeedUP -= Time.deltaTime;
+        if (timeSpeedUP <= 0)
+        {
+            PlayerControl.speed = 10f;
+        }
+    }*/
       
     private void Update()
     {
