@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: e736c9466c2967749bdc995d3a25285b
+guid: acc1eea9b15aa564282ef347e208834c
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Coins_0
-    21300002: Coins_1
-    21300004: Coins_2
-    21300006: Coins_3
+    21300000: bonus icons_0
+    21300002: bonus icons_1
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -49,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 60
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -143,13 +141,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Coins_0
+      name: bonus icons_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 12
         y: 11
         width: 131
-        height: 121
+        height: 151
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,19 +155,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fbd88fbfa7134046b1c08a394cedde9
+      spriteID: 3892c0a1168f06b4e905d5cb9fb0ea80
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Coins_1
+      name: bonus icons_1
       rect:
         serializedVersion: 2
-        x: 151
-        y: 11
-        width: 131
-        height: 121
+        x: 162
+        y: 54
+        width: 49
+        height: 105
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,47 +175,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa33d53dc2a008843b9c0818d79a453b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Coins_2
-      rect:
-        serializedVersion: 2
-        x: 299
-        y: 11
-        width: 131
-        height: 121
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 94d7db54991a682409b3e1b326c569c8
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Coins_3
-      rect:
-        serializedVersion: 2
-        x: 447
-        y: 11
-        width: 131
-        height: 123
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 92a6b8ee4402eb540b3a4ae2051cd8a1
+      spriteID: fa3ff6814ad28ab49baadfcc227eefec
       vertices: []
       indices: 
       edges: []
@@ -225,7 +183,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9f25bb671ab6de246b535a41a1f975e1
+    spriteID: 07f63c315de09d74a82bfe9421b7ba17
     vertices: []
     indices: 
     edges: []
