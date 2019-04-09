@@ -7,6 +7,7 @@ using UnityEngine.Advertisements;
 public class RestartMenu : MonoBehaviour
 {
     public GameObject GemADS;
+    public static int coef = 0;
 
     public static int BestScore;
     public static int SummScore;
@@ -18,6 +19,7 @@ public class RestartMenu : MonoBehaviour
 
     private void Start()
     {
+        coef = 0;
         if (Advertisement.isSupported)
         {
             Advertisement.Initialize("eab49987-0266-41fc-b3c4-d054ee61984b", false);
@@ -33,7 +35,7 @@ public class RestartMenu : MonoBehaviour
             GemScore += Player.gemScore;
             saveGemScore();
             GemADS.SetActive(false);
-            //Invoke("Jopke", 0.2f);
+            coef = 1;
         }
     }
 
