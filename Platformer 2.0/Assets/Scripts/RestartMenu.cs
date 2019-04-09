@@ -19,6 +19,7 @@ public class RestartMenu : MonoBehaviour
 
     private void Start()
     {
+        GemADS.SetActive(false);
         coef = 0;
         if (Advertisement.isSupported)
         {
@@ -37,19 +38,26 @@ public class RestartMenu : MonoBehaviour
                 Player.deadscore++;
             }
         }
+        if (Player.gemScore > 0)
+        {
+            GemADS.SetActive(true);
+        }
     }
 
     public void WatchADS()
     {
-        if (Advertisement.IsReady())
+        if (Player.gemScore > 0)
         {
-            Advertisement.Show();
-            GemScore += Player.gemScore;
-            saveGemScore();
-            GemADS.SetActive(false);
-            coef = 1;
+            if (Advertisement.IsReady())
+            {
+                Advertisement.Show();
+                GemScore += Player.gemScore;
+                saveGemScore();
+                GemADS.SetActive(false);
+                coef = 1;
+            }
         }
-    }
+     }
 
     public void Restart()
         {
@@ -99,8 +107,6 @@ public class RestartMenu : MonoBehaviour
         Player.Score = 0;
         Player.gemScore = 0;
         SceneManager.LoadScene("MainMenu");
-        //Player.Score = 0;
-        //Player.gemScore = 0;
     }
 
     void saveScore()
