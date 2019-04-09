@@ -26,8 +26,8 @@ public class RestartMenu : MonoBehaviour
                 Player.lose = false;
                 SpawnTresh.spead = 1f;
 
-            saveScore();
-            BestScore = PlayerPrefs.GetInt(BEST_SCORE);
+                saveScore();
+                BestScore = PlayerPrefs.GetInt(BEST_SCORE);
                 Player.Score = 0;
             }
             Invoke("Jopke", 0.2f);   
@@ -58,9 +58,11 @@ public class RestartMenu : MonoBehaviour
             saveScore();
             BestScore = PlayerPrefs.GetInt(BEST_SCORE);
         }
-        SceneManager.LoadScene("MainMenu");
         Player.Score = 0;
         Player.gemScore = 0;
+        SceneManager.LoadScene("MainMenu");
+        //Player.Score = 0;
+        //Player.gemScore = 0;
     }
 
     void saveScore()

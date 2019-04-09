@@ -128,9 +128,9 @@ public class SpawnTresh : MonoBehaviour
                     timeSpeedUP = time + UnityEngine.Random.Range(20f, 60f);
                 }
             }
-            if (Player.Score > 100)
+            if (Player.Score > 1)
             {
-                if (time > timeSpeedUP)
+                if (time > timeGem)
                 {
                     createGem();
                     timeGem = time + UnityEngine.Random.Range(20f, 60f);
@@ -147,6 +147,7 @@ public class SpawnTresh : MonoBehaviour
             timeSilv = 0;
             timeGold = 0;
             timeEvil = 0;
+            timeGem = 0;
             time = 0;
         }       
     }
