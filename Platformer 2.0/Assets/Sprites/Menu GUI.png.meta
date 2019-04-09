@@ -4,6 +4,7 @@ TextureImporter:
   fileIDToRecycleName:
     21300000: Menu GUI_0
     21300002: Menu GUI_1
+    21300004: Menu GUI_2
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -144,8 +145,28 @@ TextureImporter:
       name: Menu GUI_0
       rect:
         serializedVersion: 2
-        x: 37
-        y: 256
+        x: 18
+        y: 22
+        width: 383
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd7dce7a1a7c5046a6ee7fb4836cd56
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu GUI_1
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 150
         width: 383
         height: 117
       alignment: 0
@@ -155,19 +176,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a32b2f0944cb7f47b26730252f92427
+      spriteID: 5f48d7b358b59a3448a2e3c1e5b18f2f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Menu GUI_1
+      name: Menu GUI_2
       rect:
         serializedVersion: 2
-        x: 37
-        y: 26
+        x: 447
+        y: 16
         width: 383
-        height: 195
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,7 +196,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 220f0dc851f15c643bad60651ec2d523
+      spriteID: 55e2bab1acb141d46bba1599a3907bdc
       vertices: []
       indices: 
       edges: []
@@ -183,7 +204,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d6d93ae00b1dfc340b91d59881c097d6
+    spriteID: 67cd131238d57014e9d25c01577b7c11
     vertices: []
     indices: 
     edges: []
