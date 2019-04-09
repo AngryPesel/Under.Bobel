@@ -680,7 +680,7 @@ PrefabInstance:
         type: 3}
       propertyPath: CoinEvil
       value: 
-      objectReference: {fileID: 8300000, guid: d5957ba01cced524d8feea002f99899b, type: 3}
+      objectReference: {fileID: 8300000, guid: 3134d3e73457005428591eae58e30ded, type: 3}
     - target: {fileID: 3124778445170120863, guid: 32c569a99b8b13f4fbce0484345b5d20,
         type: 3}
       propertyPath: ShildActive
@@ -1125,7 +1125,7 @@ MonoBehaviour:
   coinevil: {fileID: 831280206533870522, guid: 80d6e38dcb293384482672f84c527ac9, type: 3}
   Shild: {fileID: 6703936400049961363, guid: e909a4ec4a2075541bf53fd786eb4517, type: 3}
   SpeedUP: {fileID: 6237035800578219124, guid: 9ba158aeb044ef046858c29cd1e72f63, type: 3}
-  Gem: {fileID: 0}
+  Gem: {fileID: 1536649825455043748, guid: f2d917b939bee7d47890f719683c0124, type: 3}
   speed1: 1.5
   Score1: 10
   Score2: 20
