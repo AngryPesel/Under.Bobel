@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Advertisements;
 
 public class RestartMenu : MonoBehaviour
 {
+    public GameObject GemADS;
+
     public static int BestScore;
     public static int SummScore;
     public static int GemScore;
@@ -12,6 +15,27 @@ public class RestartMenu : MonoBehaviour
     public static string BEST_SCORE = "saveScore";
     public static string SUMM_SCORE = "ScoreSumm";
     public static string SUMM_GEM_SCORE = "GemScore";
+
+    private void Start()
+    {
+        if (Advertisement.isSupported)
+        {
+            Advertisement.Initialize("eab49987-0266-41fc-b3c4-d054ee61984b", false);
+        }
+        else Debug.Log("Platform is not supported");
+    }
+
+    public void WatchADS()
+    {
+        if (Advertisement.IsReady())
+        {
+            Advertisement.Show();
+            GemScore += Player.gemScore;
+            saveGemScore();
+            GemADS.SetActive(false);
+            //Invoke("Jopke", 0.2f);
+        }
+    }
 
     public void Restart()
         {
