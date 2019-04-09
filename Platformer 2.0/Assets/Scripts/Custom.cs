@@ -9,20 +9,25 @@ public class Custom : MonoBehaviour
     public Sprite LGBT_GG;
     public Sprite Bobel_def;
     public Sprite CattyBobel;
+    public Sprite Orange_bobel;
 
     public static string LGBT = "LGBT";
     public static string Catty = "Catty";
+    public static string Orange = "Orange";
 
     public static int Cond_LGBT;
     public static int Cond_Catty;
+    public static int Cond_Orange;
 
     public static string CheckLGBT = "CheckLGBT";
     public static string CheckCatty = "CheckCatty";
     public static string CheckBobel = "CheckBobel";
+    public static string CheckOrange = "CheckOrange";
 
     public static int Check_LGBT;
     public static int Check_Catty;
     public static int Check_Bobel;
+    public static int Check_Orange;
 
     public int Ost;
 
@@ -31,6 +36,7 @@ public class Custom : MonoBehaviour
         Check_LGBT = PlayerPrefs.GetInt(CheckLGBT, Check_LGBT);
         Check_Catty = PlayerPrefs.GetInt(CheckCatty, Check_Catty);
         Check_Bobel = PlayerPrefs.GetInt(CheckBobel, Check_Bobel);
+        Check_Orange = PlayerPrefs.GetInt(CheckOrange, Check_Orange);
     }
 
     public void Buy_LGBT()
@@ -45,12 +51,15 @@ public class Custom : MonoBehaviour
                 Check_LGBT = 1;
                 Check_Catty = 0;
                 Check_Bobel = 0;
+                Check_Orange = 0;
                 PlayerPrefs.SetInt(CheckLGBT, Check_LGBT);
                 PlayerPrefs.SetInt(CheckCatty, Check_Catty);
                 PlayerPrefs.SetInt(CheckBobel, Check_Bobel);
+                PlayerPrefs.SetInt(CheckOrange, Check_Orange);
                 Check_LGBT = PlayerPrefs.GetInt(CheckLGBT);
                 Check_Catty = PlayerPrefs.GetInt(CheckCatty);
                 Check_Bobel = PlayerPrefs.GetInt(CheckBobel);
+                Check_Orange = PlayerPrefs.GetInt(CheckOrange);
 
                 Cond_LGBT = 1;
                 PlayerPrefs.SetInt(LGBT, Cond_LGBT);
@@ -61,12 +70,15 @@ public class Custom : MonoBehaviour
             Check_LGBT = 1;
             Check_Catty = 0;
             Check_Bobel = 0;
+            Check_Orange = 0;
             PlayerPrefs.SetInt(CheckLGBT, Check_LGBT);
             PlayerPrefs.SetInt(CheckCatty, Check_Catty);
             PlayerPrefs.SetInt(CheckBobel, Check_Bobel);
+            PlayerPrefs.SetInt(CheckOrange, Check_Orange);
             Check_LGBT = PlayerPrefs.GetInt(CheckLGBT);
             Check_Catty = PlayerPrefs.GetInt(CheckCatty);
             Check_Bobel = PlayerPrefs.GetInt(CheckBobel);
+            Check_Orange = PlayerPrefs.GetInt(CheckOrange);
         }
     }
 
@@ -83,12 +95,15 @@ public class Custom : MonoBehaviour
                 Check_LGBT = 0;
                 Check_Catty = 1;
                 Check_Bobel = 0;
+                Check_Orange = 0;
                 PlayerPrefs.SetInt(CheckLGBT, Check_LGBT);
                 PlayerPrefs.SetInt(CheckCatty, Check_Catty);
                 PlayerPrefs.SetInt(CheckBobel, Check_Bobel);
+                PlayerPrefs.SetInt(CheckOrange, Check_Orange);
                 Check_LGBT = PlayerPrefs.GetInt(CheckLGBT);
                 Check_Catty = PlayerPrefs.GetInt(CheckCatty);
                 Check_Bobel = PlayerPrefs.GetInt(CheckBobel);
+                Check_Orange = PlayerPrefs.GetInt(CheckOrange);
 
                 Cond_Catty = 1;
                 PlayerPrefs.SetInt(Catty, Cond_Catty);
@@ -99,12 +114,58 @@ public class Custom : MonoBehaviour
             Check_LGBT = 0;
             Check_Catty = 1;
             Check_Bobel = 0;
+            Check_Orange = 0;
             PlayerPrefs.SetInt(CheckLGBT, Check_LGBT);
             PlayerPrefs.SetInt(CheckCatty, Check_Catty);
             PlayerPrefs.SetInt(CheckBobel, Check_Bobel);
+            PlayerPrefs.SetInt(CheckOrange, Check_Orange);
             Check_LGBT = PlayerPrefs.GetInt(CheckLGBT);
             Check_Catty = PlayerPrefs.GetInt(CheckCatty);
             Check_Bobel = PlayerPrefs.GetInt(CheckBobel);
+            Check_Orange = PlayerPrefs.GetInt(CheckOrange);
+        }
+    }
+
+    public void Buy_Orange()
+    {
+        if (PlayerPrefs.GetInt(Orange, Cond_Orange) < 1)
+        {
+            if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) >= 10000)
+            {
+                Ost = PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) - 10000;
+                PlayerPrefs.SetInt(RestartMenu.SUMM_SCORE, Ost);
+
+                Check_LGBT = 0;
+                Check_Catty = 0;
+                Check_Bobel = 0;
+                Check_Orange = 1;
+                PlayerPrefs.SetInt(CheckLGBT, Check_LGBT);
+                PlayerPrefs.SetInt(CheckCatty, Check_Catty);
+                PlayerPrefs.SetInt(CheckBobel, Check_Bobel);
+                PlayerPrefs.SetInt(CheckOrange, Check_Orange);
+                Check_LGBT = PlayerPrefs.GetInt(CheckLGBT);
+                Check_Catty = PlayerPrefs.GetInt(CheckCatty);
+                Check_Bobel = PlayerPrefs.GetInt(CheckBobel);
+                Check_Orange = PlayerPrefs.GetInt(CheckOrange);
+
+                Cond_Orange = 1;
+                PlayerPrefs.SetInt(Orange, Cond_Orange);
+            }
+        }
+        else
+        {
+            Check_LGBT = 0;
+            Check_Catty = 0;
+            Check_Bobel = 0;
+            Check_Orange = 1;
+            PlayerPrefs.SetInt(CheckLGBT, Check_LGBT);
+            PlayerPrefs.SetInt(CheckCatty, Check_Catty);
+            PlayerPrefs.SetInt(CheckBobel, Check_Bobel);
+            PlayerPrefs.SetInt(CheckOrange, Check_Orange);
+            Check_LGBT = PlayerPrefs.GetInt(CheckLGBT);
+            Check_Catty = PlayerPrefs.GetInt(CheckCatty);
+            Check_Bobel = PlayerPrefs.GetInt(CheckBobel);
+            Check_Orange = PlayerPrefs.GetInt(CheckOrange);
         }
     }
 
@@ -113,12 +174,15 @@ public class Custom : MonoBehaviour
         Check_LGBT = 0;
         Check_Catty = 0;
         Check_Bobel = 1;
+        Check_Orange = 0;
         PlayerPrefs.SetInt(CheckLGBT, Check_LGBT);
         PlayerPrefs.SetInt(CheckCatty, Check_Catty);
         PlayerPrefs.SetInt(CheckBobel, Check_Bobel);
+        PlayerPrefs.SetInt(CheckOrange, Check_Orange);
         Check_LGBT = PlayerPrefs.GetInt(CheckLGBT);
         Check_Catty = PlayerPrefs.GetInt(CheckCatty);
         Check_Bobel = PlayerPrefs.GetInt(CheckBobel);
+        Check_Orange = PlayerPrefs.GetInt(CheckOrange);
     }
   
 }
