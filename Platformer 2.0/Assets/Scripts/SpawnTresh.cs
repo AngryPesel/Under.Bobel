@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class SpawnTresh : MonoBehaviour
 {
-    /*private float SpawnCup = 0.0f;
-    private float SpawnSilv = 0.0f;
-    private float SpawnGold = 0.0f;
-    private float SpawnEvil = 0.0f;*/
-
     public GameObject tresh;
     public GameObject coincup;
     public GameObject coinsilv;
@@ -62,11 +57,6 @@ public class SpawnTresh : MonoBehaviour
         spead = 3f;
 
         StartCoroutine(SpawnTrash());
-      //  StartCoroutine(SpawnCoin());
-        /*StartCoroutine(SpawnCoinCUP());
-        StartCoroutine(SpawnCoinSILV());
-        StartCoroutine(SpawnCoinGOLD());
-        StartCoroutine(SpawnCoinEVIL());*/
     }
 
     private void Update()

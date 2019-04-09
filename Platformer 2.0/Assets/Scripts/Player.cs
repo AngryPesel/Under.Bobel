@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     public static int gemScore = 0;
     public static bool speedUP = false;
 
+    public static int deadscore = 1;
+
     private Animator anim;
     public Animator CoinUI;
 
@@ -50,6 +52,7 @@ public class Player : MonoBehaviour
             {
                 anim.SetBool("Dead", true);
                 lose = true;
+                deadscore++;
                 restart.SetActive(true);
                 pause.SetActive(false);
                 GetComponent<AudioSource>().clip = Tresh;

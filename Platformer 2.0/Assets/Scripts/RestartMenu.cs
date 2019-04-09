@@ -27,6 +27,18 @@ public class RestartMenu : MonoBehaviour
         else Debug.Log("Platform is not supported");
     }
 
+    private void Update()
+    {
+        if (Player.deadscore % 5 == 0)
+        {
+            if (Advertisement.IsReady())
+            {
+                Advertisement.Show();
+                Player.deadscore++;
+            }
+        }
+    }
+
     public void WatchADS()
     {
         if (Advertisement.IsReady())
