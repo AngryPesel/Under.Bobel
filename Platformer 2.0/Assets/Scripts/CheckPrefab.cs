@@ -23,6 +23,10 @@ public class CheckPrefab : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().sprite = Bobel_def;
         if (PlayerPrefs.GetInt(Custom.CheckOrange) == 1)
             anim.SetFloat("Orange_trans", 1);
+        if (PlayerPrefs.GetInt(Custom.CheckCandy) == 1)
+            anim.SetFloat("Candy_trans", 1);
+        if (PlayerPrefs.GetInt(Custom.CheckDog) == 1)
+            anim.SetFloat("Dog_trans", 1);
     }
 
 }
