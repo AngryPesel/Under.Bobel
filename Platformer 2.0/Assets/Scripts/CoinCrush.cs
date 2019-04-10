@@ -7,8 +7,6 @@ public class CoinCrush : MonoBehaviour
     private Animator anim;
     private bool Crush = false;
 
-   
-
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")

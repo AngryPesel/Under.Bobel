@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        RestartMenu.coef = 0;
+        //RestartMenu.coef = 0;
         lose = false;
         CoinIn = false;
         ShildAct = false;
@@ -136,10 +136,10 @@ public class Player : MonoBehaviour
     private void Update()
     {
         txt.text = "" + Score;
-        if (RestartMenu.coef == 0)
+        //if (RestartMenu.coef == 0)
             GemScore.text = "" + gemScore;
-        else GemScore.text = "" + gemScore * 2;
-        //Debug.Log(ShildAct);
+        //else GemScore.text = "" + gemScore * 2;
+
     }
 
  

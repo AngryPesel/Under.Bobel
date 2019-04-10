@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1955701969140626631}
   - component: {fileID: 3502058558970569347}
   - component: {fileID: 4394178148356417514}
+  - component: {fileID: 4057155319623874042}
   m_Layer: 0
   m_Name: Tresh 1
   m_TagString: Tresh
@@ -143,3 +144,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4057155319623874042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988368903911251654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72e2f7c3250d55c469dacee05fd95d42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bottle_def: {fileID: 21300000, guid: b17b409eb745f7c4192ca7e5f89552a2, type: 3}

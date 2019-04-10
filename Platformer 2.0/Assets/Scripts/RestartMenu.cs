@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Advertisements;
+//using UnityEngine.Advertisements;
+
 
 public class RestartMenu : MonoBehaviour
 {
     public GameObject GemADS;
-    public static int coef = 0;
+    //public static int coef = 0;
 
     public static int BestScore;
     public static int SummScore;
@@ -17,18 +18,18 @@ public class RestartMenu : MonoBehaviour
     public static string SUMM_SCORE = "ScoreSumm";
     public static string SUMM_GEM_SCORE = "GemScore";
 
-    private void Start()
+    /*private void Start()
     {
         GemADS.SetActive(false);
         coef = 0;
         if (Advertisement.isSupported)
         {
-            Advertisement.Initialize("eab49987-0266-41fc-b3c4-d054ee61984b", false);
+            Advertisement.Initialize("3a249527-24c8-4eb8-97f3-ab9a50e7e251", false);
         }
         else Debug.Log("Platform is not supported");
-    }
+    }*/
 
-    private void Update()
+    /*private void Update()
     {
         if (Player.deadscore % 5 == 0)
         {
@@ -42,9 +43,9 @@ public class RestartMenu : MonoBehaviour
         {
             GemADS.SetActive(true);
         }
-    }
+    }*/
 
-    public void WatchADS()
+    /*public void WatchADS()
     {
         if (Player.gemScore > 0)
         {
@@ -57,7 +58,7 @@ public class RestartMenu : MonoBehaviour
                 coef = 1;
             }
         }
-     }
+     }*/
 
     public void Restart()
         {

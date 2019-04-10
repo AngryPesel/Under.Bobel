@@ -12,11 +12,17 @@ public class Custom : MonoBehaviour
     public static string Candy = "Candy";
     public static string Dog = "Dog";
 
+    public static string Bottle = "Bottle";
+    public static string Bottle_Prem = "Bottle_Prem";
+
     public static int Cond_LGBT;
     public static int Cond_Catty;
     public static int Cond_Orange;
     public static int Cond_Candy;
     public static int Cond_Dog;
+
+    public static int Cond_Bottle;
+    public static int Cond_Bottle_Prem;
 
     public static string CheckLGBT = "CheckLGBT";
     public static string CheckCatty = "CheckCatty";
@@ -25,6 +31,9 @@ public class Custom : MonoBehaviour
     public static string CheckCandy = "CheckCandy";
     public static string CheckDog = "CheckDog";
 
+    public static string CheckBottle = "CheckBottle";
+    public static string CheckBottlePrem = "CheckBottlePrem";
+
     public static int Check_LGBT;
     public static int Check_Catty;
     public static int Check_Bobel;
@@ -32,7 +41,11 @@ public class Custom : MonoBehaviour
     public static int Check_Candy;
     public static int Check_Dog;
 
+    public static int Check_Bottle;
+    public static int Check_Bottle_Prem;
+
     public int Ost;
+    public int Ost_Gem;
 
     private void Start()
     {
@@ -42,6 +55,9 @@ public class Custom : MonoBehaviour
         Check_Orange = PlayerPrefs.GetInt(CheckOrange, Check_Orange);
         Check_Candy = PlayerPrefs.GetInt(CheckCandy, Check_Candy);
         Check_Dog = PlayerPrefs.GetInt(CheckDog, Check_Dog);
+
+        Check_Bottle = PlayerPrefs.GetInt(CheckBottle, Check_Bottle);
+        Check_Bottle_Prem = PlayerPrefs.GetInt(CheckBottlePrem, Check_Bottle_Prem);
     }
 
     public void Buy_LGBT()
@@ -342,6 +358,46 @@ public class Custom : MonoBehaviour
         Check_Dog = PlayerPrefs.GetInt(CheckDog);
     }
   
+    public void Buy_Bottle_Prem()
+    {
+        if (PlayerPrefs.GetInt(Bottle_Prem, Cond_Bottle_Prem) < 1)
+        {
+            if (PlayerPrefs.GetInt(RestartMenu.SUMM_GEM_SCORE) >= 50)
+            {
+                Ost_Gem = PlayerPrefs.GetInt(RestartMenu.SUMM_GEM_SCORE) - 50;
+                PlayerPrefs.SetInt(RestartMenu.SUMM_GEM_SCORE, Ost_Gem);
+
+                Check_Bottle = 0;
+                Check_Bottle_Prem = 1;
+                PlayerPrefs.SetInt(CheckBottle, Check_Bottle);
+                PlayerPrefs.SetInt(CheckBottlePrem, Check_Bottle_Prem);
+                Check_Bottle = PlayerPrefs.GetInt(CheckBottle);
+                Check_Bottle_Prem = PlayerPrefs.GetInt(CheckBottlePrem);
+
+                Cond_Bottle_Prem = 1;
+                PlayerPrefs.SetInt(Bottle_Prem, Cond_Bottle_Prem);
+            }
+        }
+        else
+        {
+            Check_Bottle = 0;
+            Check_Bottle_Prem = 1;
+            PlayerPrefs.SetInt(CheckBottle, Check_Bottle);
+            PlayerPrefs.SetInt(CheckBottlePrem, Check_Bottle_Prem);
+            Check_Bottle = PlayerPrefs.GetInt(CheckBottle);
+            Check_Bottle_Prem = PlayerPrefs.GetInt(CheckBottlePrem);
+        }
+    }
+
+    public void Select_Bottle_Def()
+    {
+        Check_Bottle = 1;
+        Check_Bottle_Prem = 0;
+        PlayerPrefs.SetInt(CheckBottle, Check_Bottle);
+        PlayerPrefs.SetInt(CheckBottlePrem, Check_Bottle_Prem);
+        Check_Bottle = PlayerPrefs.GetInt(CheckBottle);
+        Check_Bottle_Prem = PlayerPrefs.GetInt(CheckBottlePrem);
+    }
 }
 
 
