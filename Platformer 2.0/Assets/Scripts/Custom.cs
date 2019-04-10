@@ -6,11 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class Custom : MonoBehaviour
 {
-    public Sprite LGBT_GG;
-    public Sprite Bobel_def;
-    public Sprite CattyBobel;
-    public Sprite Orange_bobel;
-
     public static string LGBT = "LGBT";
     public static string Catty = "Catty";
     public static string Orange = "Orange";
