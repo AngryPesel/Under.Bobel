@@ -34,6 +34,12 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        ScinesDataBase database = new ScinesDataBase();
+        Debug.Log("URA1");
+       // database.insertData(new ScinesDataBase.ScineEntity("name", 1, true));
+        Debug.Log("URA2");
+        database.close();
+        Debug.Log("URA3");
         //RestartMenu.coef = 0;
         lose = false;
         CoinIn = false;
