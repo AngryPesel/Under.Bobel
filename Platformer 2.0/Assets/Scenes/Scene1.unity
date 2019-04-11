@@ -781,6 +781,16 @@ PrefabInstance:
       propertyPath: GemScore
       value: 
       objectReference: {fileID: 1292039564}
+    - target: {fileID: 3124778445170120863, guid: 32c569a99b8b13f4fbce0484345b5d20,
+        type: 3}
+      propertyPath: Magic
+      value: 
+      objectReference: {fileID: 8300000, guid: 2a2659787f3346b44a408a9353b5f5bc, type: 3}
+    - target: {fileID: 3124778445170120863, guid: 32c569a99b8b13f4fbce0484345b5d20,
+        type: 3}
+      propertyPath: SpeadUp
+      value: 
+      objectReference: {fileID: 8300000, guid: 2ee7b8c23005cdf449ad71303510c2b0, type: 3}
     - target: {fileID: 1868671657691073445, guid: 32c569a99b8b13f4fbce0484345b5d20,
         type: 3}
       propertyPath: m_Enabled

@@ -31,6 +31,8 @@ public class Player : MonoBehaviour
     public AudioClip CoinEvil;
     public AudioClip ShildActive;
     public AudioClip brocenGlass;
+    public AudioClip Magic;
+    public AudioClip SpeadUp;
 
     private void Start()
     {
@@ -121,14 +123,16 @@ public class Player : MonoBehaviour
         }
         if (collision.gameObject.tag == "SpeedUP")
         {
-            //AUDIO
+            GetComponent<AudioSource>().clip = SpeadUp;
+            GetComponent<AudioSource>().Play();
             Destroy(collision.gameObject);
             PlayerControl.speed = 1000f;
             speedUP = true;
         }
         if (collision.gameObject.tag == "Gem")
         {
-            //Audio
+            GetComponent<AudioSource>().clip = Magic;
+            GetComponent<AudioSource>().Play();
             Destroy(collision.gameObject);
             gemScore++;
         }

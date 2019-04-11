@@ -883,11 +883,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c0475a91be0413741a8820c256e13052, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7dc50a9c653ffde4990463fef786c5d4, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1747,17 +1747,27 @@ PrefabInstance:
     - target: {fileID: 8238796132473856754, guid: 0de8616620dc0154b9bf39457c449fd9,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -559.9057
+      value: -538.6335
       objectReference: {fileID: 0}
     - target: {fileID: 8238796132473856754, guid: 0de8616620dc0154b9bf39457c449fd9,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 3860
+      value: 3760.8
       objectReference: {fileID: 0}
     - target: {fileID: 8238796132473856754, guid: 0de8616620dc0154b9bf39457c449fd9,
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 739
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238796132473856754, guid: 0de8616620dc0154b9bf39457c449fd9,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238796132473856754, guid: 0de8616620dc0154b9bf39457c449fd9,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8238796130872795344, guid: 0de8616620dc0154b9bf39457c449fd9,
         type: 3}

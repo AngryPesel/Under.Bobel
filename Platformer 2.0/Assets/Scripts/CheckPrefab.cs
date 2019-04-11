@@ -27,6 +27,12 @@ public class CheckPrefab : MonoBehaviour
             anim.SetFloat("Candy_trans", 1);
         if (PlayerPrefs.GetInt(Custom.CheckDog) == 1)
             anim.SetFloat("Dog_trans", 1);
+        if (PlayerPrefs.GetInt(Custom.CheckUnic) == 1)
+            anim.SetFloat("Unic_trans", 1);
+        if (PlayerPrefs.GetInt(Custom.CheckPirate) == 1)
+            anim.SetFloat("Pirate_trans", 1);
+        if (PlayerPrefs.GetInt(Custom.CheckDiver) == 1)
+            anim.SetFloat("Diver_trans", 1);
     }
 
 }
