@@ -33,9 +33,9 @@ public class RestartMenu : MonoBehaviour
     {
         if (Player.deadscore % 5 == 0)
         {
-            if (Advertisement.IsReady())
+            if (Advertisement.IsReady("Video"))
             {
-                Advertisement.Show();
+                Advertisement.Show("Video");
                 Player.deadscore++;
             }
         }
@@ -49,9 +49,9 @@ public class RestartMenu : MonoBehaviour
     {
         if (Player.gemScore > 0)
         {
-            if (Advertisement.IsReady())
+            if (Advertisement.IsReady("rewardedVideo"))
             {
-                Advertisement.Show();
+                Advertisement.Show("rewardedVideo");
                 GemScore += Player.gemScore;
                 saveGemScore();
                 GemADS.SetActive(false);
