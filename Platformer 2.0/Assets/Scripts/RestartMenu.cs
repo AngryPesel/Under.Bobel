@@ -20,7 +20,7 @@ public class RestartMenu : MonoBehaviour
 
     private void Start()
     {
-        GemADS.SetActive(false);
+        GemADS.SetActive(true);
         coef = 0;
         if (Advertisement.isSupported)
         {
@@ -39,10 +39,10 @@ public class RestartMenu : MonoBehaviour
                 Player.deadscore++;
             }
         }
-        if (Player.gemScore > 0)
+        /*if (Player.gemScore > 0)
         {
             GemADS.SetActive(true);
-        }
+        }*/
     }
 
     public void WatchADS()
