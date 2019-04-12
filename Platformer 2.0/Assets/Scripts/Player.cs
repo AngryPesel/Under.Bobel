@@ -41,8 +41,8 @@ public class Player : MonoBehaviour
        // database.insertData(new ScinesDataBase.ScineEntity("name", 1, true));
         Debug.Log("URA2");
         database.close();
-        Debug.Log("URA3");
-        //RestartMenu.coef = 0;*/
+        Debug.Log("URA3");*/
+        RestartMenu.coef = 0;
         lose = false;
         CoinIn = false;
         ShildAct = false;
@@ -146,9 +146,9 @@ public class Player : MonoBehaviour
     private void Update()
     {
         txt.text = "" + Score;
-        //if (RestartMenu.coef == 0)
+        if (RestartMenu.coef == 0)
             GemScore.text = "" + gemScore;
-        //else GemScore.text = "" + gemScore * 2;
+        else GemScore.text = "" + gemScore * 2;
 
     }
 
