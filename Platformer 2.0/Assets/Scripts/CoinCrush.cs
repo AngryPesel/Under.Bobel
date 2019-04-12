@@ -16,7 +16,6 @@ public class CoinCrush : MonoBehaviour
 
         StartCoroutine(CrashTime());
 
-
         Destroy(collision.gameObject);
     }
 

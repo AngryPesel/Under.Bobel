@@ -79,9 +79,9 @@ public class Custom : MonoBehaviour
     {
         if (PlayerPrefs.GetInt(LGBT, Cond_LGBT) < 1)
         {
-            if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) >= 1000)
+            if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) >= 5000)
             {
-                Ost = PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) - 1000;
+                Ost = PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) - 5000;
                 PlayerPrefs.SetInt(RestartMenu.SUMM_SCORE, Ost);
 
                 Check_LGBT = 1;
@@ -153,9 +153,9 @@ public class Custom : MonoBehaviour
     {
         if (PlayerPrefs.GetInt(Catty, Cond_Catty) < 1)
         {
-            if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) >= 5000)
+            if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) >= 20000)
             {
-                Ost = PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) - 5000;
+                Ost = PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) - 20000;
                 PlayerPrefs.SetInt(RestartMenu.SUMM_SCORE, Ost);
 
                 Check_LGBT = 0;
@@ -226,9 +226,9 @@ public class Custom : MonoBehaviour
     {
         if (PlayerPrefs.GetInt(Orange, Cond_Orange) < 1)
         {
-            if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) >= 10000)
+            if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) >= 1000)
             {
-                Ost = PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) - 10000;
+                Ost = PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) - 1000;
                 PlayerPrefs.SetInt(RestartMenu.SUMM_SCORE, Ost);
 
                 Check_LGBT = 0;
@@ -299,9 +299,9 @@ public class Custom : MonoBehaviour
     {
         if (PlayerPrefs.GetInt(Candy, Cond_Candy) < 1)
         {
-            if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) >= 20000)
+            if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) >= 10000)
             {
-                Ost = PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) - 20000;
+                Ost = PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) - 10000;
                 PlayerPrefs.SetInt(RestartMenu.SUMM_SCORE, Ost);
 
                 Check_LGBT = 0;
@@ -372,9 +372,9 @@ public class Custom : MonoBehaviour
     {
         if (PlayerPrefs.GetInt(Dog, Cond_Dog) < 1)
         {
-            if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) >= 27000)
+            if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) >= 30000)
             {
-                Ost = PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) - 27000;
+                Ost = PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) - 30000;
                 PlayerPrefs.SetInt(RestartMenu.SUMM_SCORE, Ost);
 
                 Check_LGBT = 0;

@@ -11,6 +11,9 @@ public class disactive : MonoBehaviour
     public Button orange_butt;
     public Button candy_butt;
     public Button dog_butt;
+    public Button unic_butt;
+    public Button diver_butt;
+
 
     public Button bottle_prem_butt;
 
@@ -18,35 +21,35 @@ public class disactive : MonoBehaviour
     {
         if (PlayerPrefs.GetInt(Custom.LGBT) < 1)
         {
-            if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) < 1000)
+            if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) < 5000)
                 rainbow_butt.interactable = false;
         }
         else rainbow_butt.interactable = true;
 
         if (PlayerPrefs.GetInt(Custom.Catty) < 1)
         {
-            if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) < 5000)
+            if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) < 20000)
                 catty_butt.interactable = false;
         }
         else catty_butt.interactable = true;
 
         if (PlayerPrefs.GetInt(Custom.Orange) < 1)
         {
-            if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) < 10000)
+            if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) < 1000)
                 orange_butt.interactable = false;
         }
         else orange_butt.interactable = true;
 
         if (PlayerPrefs.GetInt(Custom.Candy) < 1)
         {
-            if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) < 20000)
+            if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) < 10000)
                 candy_butt.interactable = false;
         }
         else candy_butt.interactable = true;
 
         if (PlayerPrefs.GetInt(Custom.Dog) < 1)
         {
-            if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) < 27000)
+            if (PlayerPrefs.GetInt(RestartMenu.SUMM_SCORE) < 30000)
                 dog_butt.interactable = false;
         }
         else dog_butt.interactable = true;
@@ -57,5 +60,19 @@ public class disactive : MonoBehaviour
                 bottle_prem_butt.interactable = false;
         }
         else bottle_prem_butt.interactable = true;
+
+        if (PlayerPrefs.GetInt(Custom.Unic) < 1)
+        {
+            if (PlayerPrefs.GetInt(RestartMenu.SUMM_GEM_SCORE) < 150)
+                unic_butt.interactable = false;
+        }
+        else unic_butt.interactable = true;
+
+        if (PlayerPrefs.GetInt(Custom.Bottle_Prem) < 1)
+        {
+            if (PlayerPrefs.GetInt(RestartMenu.SUMM_GEM_SCORE) < 300)
+                diver_butt.interactable = false;
+        }
+        else diver_butt.interactable = true;
     }
 }

@@ -1210,6 +1210,8 @@ MonoBehaviour:
   orange_butt: {fileID: 1012170005}
   candy_butt: {fileID: 70124823}
   dog_butt: {fileID: 1109777778}
+  unic_butt: {fileID: 596288475}
+  diver_butt: {fileID: 1341672149}
   bottle_prem_butt: {fileID: 721826127}
 --- !u!1 &567493318
 GameObject:
@@ -1994,7 +1996,7 @@ PrefabInstance:
     - target: {fileID: 8238796130872795348, guid: 0de8616620dc0154b9bf39457c449fd9,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8238796131527799147, guid: 0de8616620dc0154b9bf39457c449fd9,
         type: 3}
@@ -2331,16 +2333,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -22
       objectReference: {fileID: 0}
-    - target: {fileID: 8238796131527799149, guid: 0de8616620dc0154b9bf39457c449fd9,
-        type: 3}
-      propertyPath: m_Name
-      value: Buy
-      objectReference: {fileID: 0}
     - target: {fileID: 8238796130723094859, guid: 0de8616620dc0154b9bf39457c449fd9,
         type: 3}
       propertyPath: Song
       value: 
       objectReference: {fileID: 8300000, guid: 7dc50a9c653ffde4990463fef786c5d4, type: 3}
+    - target: {fileID: 8238796131527799149, guid: 0de8616620dc0154b9bf39457c449fd9,
+        type: 3}
+      propertyPath: m_Name
+      value: Buy
+      objectReference: {fileID: 0}
     - target: {fileID: 8238796130697861189, guid: 0de8616620dc0154b9bf39457c449fd9,
         type: 3}
       propertyPath: m_Text
@@ -4521,6 +4523,8 @@ MonoBehaviour:
   orange_butt: {fileID: 1012170005}
   candy_butt: {fileID: 70124823}
   dog_butt: {fileID: 1109777778}
+  unic_butt: {fileID: 596288475}
+  diver_butt: {fileID: 1341672149}
   bottle_prem_butt: {fileID: 721826127}
 --- !u!1 &2012424105
 GameObject:
