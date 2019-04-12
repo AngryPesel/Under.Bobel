@@ -147,8 +147,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -532}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 7.05, y: 377}
+  m_SizeDelta: {x: 444.9, y: 83.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &190848048
 MonoBehaviour:
@@ -223,8 +223,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 4e96c3b2acf192e459ba62f9f18ab4f9, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1604,6 +1604,36 @@ PrefabInstance:
       propertyPath: GemADS
       value: 
       objectReference: {fileID: 190848046}
+    - target: {fileID: 3477824624664242459, guid: bede96f07a15cd34686bc30c78323ec7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1121
+      objectReference: {fileID: 0}
+    - target: {fileID: 3477824624664242459, guid: bede96f07a15cd34686bc30c78323ec7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3477824623326895609, guid: bede96f07a15cd34686bc30c78323ec7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -611
+      objectReference: {fileID: 0}
+    - target: {fileID: 3477824623326895609, guid: bede96f07a15cd34686bc30c78323ec7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 7.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3477824623326895609, guid: bede96f07a15cd34686bc30c78323ec7,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.50000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 3477824623326895609, guid: bede96f07a15cd34686bc30c78323ec7,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.4999999
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bede96f07a15cd34686bc30c78323ec7, type: 3}
 --- !u!1001 &3577257816737872440
