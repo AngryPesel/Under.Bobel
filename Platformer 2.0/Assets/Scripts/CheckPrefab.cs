@@ -19,8 +19,6 @@ public class CheckPrefab : MonoBehaviour
             anim.SetFloat("Rainbow_trans", 1);
         if (PlayerPrefs.GetInt(Custom.CheckCatty) == 1)
             anim.SetFloat("Catty_trans", 1);
-        if (PlayerPrefs.GetInt(Custom.CheckBobel) == 1)
-            gameObject.GetComponent<SpriteRenderer>().sprite = Bobel_def;
         if (PlayerPrefs.GetInt(Custom.CheckOrange) == 1)
             anim.SetFloat("Orange_trans", 1);
         if (PlayerPrefs.GetInt(Custom.CheckCandy) == 1)
@@ -33,6 +31,8 @@ public class CheckPrefab : MonoBehaviour
             anim.SetFloat("Pirate_trans", 1);
         if (PlayerPrefs.GetInt(Custom.CheckDiver) == 1)
             anim.SetFloat("Diver_trans", 1);
+        if (PlayerPrefs.GetInt(Custom.CheckBobel) == 1)
+            gameObject.GetComponent<SpriteRenderer>().sprite = Bobel_def;
     }
 
 }

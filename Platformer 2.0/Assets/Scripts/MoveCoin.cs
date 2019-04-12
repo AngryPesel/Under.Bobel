@@ -13,12 +13,8 @@ public class MoveCoin : MonoBehaviour
         Down
     }
 
-   
-
     void Start()
     {
-        print("transform.position " + transform.position.x);
-
         if (transform.position.x == -3)
         {
             side = Side.Left;

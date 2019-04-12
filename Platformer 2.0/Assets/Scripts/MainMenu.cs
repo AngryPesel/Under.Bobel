@@ -8,7 +8,13 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject Shop;
 
-    public static string LGBT = "LGBT";
+    private bool pause = false;
+
+    public AudioClip Song;
+    private AudioSource audioSorse;
+
+    private bool mute = false;
+    /*public static string LGBT = "LGBT";
     public static string Catty = "Catty";
     public static string Orange = "Orange";
     public static string Candy = "Candy";
@@ -18,17 +24,20 @@ public class MainMenu : MonoBehaviour
     public static int Catty_PRICE = 5000;
     public static int Orange_PRICE = 10000;
     public static int Candy_PRICE = 20000;
-    public static int Dog_PRICE = 27000;
+    public static int Dog_PRICE = 27000;*/
 
-    public static List<ScineEntity> list;
+    //public static List<ScineEntity> list;
 
     private void Start()
     {
-        load();
+        /*load();
         if (list.Count == 0)
         {
             initData();
-        }
+        }*/
+        audioSorse = GetComponent<AudioSource>();
+        audioSorse.clip = Song;
+        audioSorse.Play();
     }
 
     public void PlayGame()
@@ -52,7 +61,7 @@ public class MainMenu : MonoBehaviour
         Shop.SetActive(false);
     }
 
-    public void load()
+    /*public void load()
     {
         ScinesDataBase database = new ScinesDataBase();
         Debug.Log("URA1");
@@ -77,5 +86,19 @@ public class MainMenu : MonoBehaviour
         Debug.Log("URA2");
         database.close();
         Debug.Log("URA3");
+    }*/
+
+    public void Mute()
+    {
+        if (!mute)
+        {
+            audioSorse.Pause();
+            mute = true;
+        }
+        else if (mute)
+        {
+            audioSorse.Play();
+            mute = false;
+        }
     }
 }

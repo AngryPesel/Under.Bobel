@@ -12,7 +12,6 @@ public class CoinIn : MonoBehaviour
         coin = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Player.CoinIn == true)

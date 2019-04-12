@@ -36,7 +36,7 @@ public class Custom : MonoBehaviour
     public static string CheckOrange = "CheckOrange";
     public static string CheckCandy = "CheckCandy";
     public static string CheckDog = "CheckDog";
-    public static string CheckUnic = "CheckDog";
+    public static string CheckUnic = "CheckUnic";
     public static string CheckPirate = "CheckPirate";
     public static string CheckDiver = "CheckDiver";
 
