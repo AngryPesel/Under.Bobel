@@ -445,9 +445,9 @@ public class Custom : MonoBehaviour
     {
         if (PlayerPrefs.GetInt(Unic, Cond_Unic) < 1)
         {
-            if (PlayerPrefs.GetInt(RestartMenu.SUMM_GEM_SCORE) >= 100)
+            if (PlayerPrefs.GetInt(RestartMenu.SUMM_GEM_SCORE) >= 150)
             {
-                Ost_Gem = PlayerPrefs.GetInt(RestartMenu.SUMM_GEM_SCORE) - 100;
+                Ost_Gem = PlayerPrefs.GetInt(RestartMenu.SUMM_GEM_SCORE) - 150;
                 PlayerPrefs.SetInt(RestartMenu.SUMM_GEM_SCORE, Ost_Gem);
 
                 Check_LGBT = 0;
