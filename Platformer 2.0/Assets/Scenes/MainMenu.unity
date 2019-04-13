@@ -5185,6 +5185,23 @@ PrefabInstance:
       propertyPath: Song
       value: 
       objectReference: {fileID: 8300000, guid: 7dc50a9c653ffde4990463fef786c5d4, type: 3}
+    - target: {fileID: 3755146382543044397, guid: 7e7fcd9e8b05c564f8ff72c8bfe0ffca,
+        type: 3}
+      propertyPath: MuteDone
+      value: 
+      objectReference: {fileID: 21300000, guid: e6e33286c5b3cc040b74fcfd18fef106,
+        type: 3}
+    - target: {fileID: 3755146382543044397, guid: 7e7fcd9e8b05c564f8ff72c8bfe0ffca,
+        type: 3}
+      propertyPath: MuteCancel
+      value: 
+      objectReference: {fileID: 21300002, guid: e6e33286c5b3cc040b74fcfd18fef106,
+        type: 3}
+    - target: {fileID: 3755146382543044397, guid: 7e7fcd9e8b05c564f8ff72c8bfe0ffca,
+        type: 3}
+      propertyPath: Sound
+      value: 
+      objectReference: {fileID: 674691286}
     - target: {fileID: 3755146382942365013, guid: 7e7fcd9e8b05c564f8ff72c8bfe0ffca,
         type: 3}
       propertyPath: m_AnchoredPosition.x

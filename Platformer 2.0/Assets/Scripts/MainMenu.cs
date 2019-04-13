@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static ScinesDataBase;
+//using static ScinesDataBase;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    public Sprite MuteCancel;
+    public Sprite MuteDone;
+
+    public GameObject Sound;
     public GameObject Shop;
 
     private bool pause = false;
@@ -49,11 +54,13 @@ public class MainMenu : MonoBehaviour
         {
             audioSorse.Pause();
             mute = true;
+            Sound.GetComponent<Image>().sprite = MuteDone;
         }
         else if (mute)
         {
             audioSorse.Play();
             mute = false;
+            Sound.GetComponent<Image>().sprite = MuteCancel;
         }
     }
 }
