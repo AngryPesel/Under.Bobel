@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -9,6 +10,11 @@ public class PauseMenu : MonoBehaviour
     public AudioClip Song;
     private AudioSource audioSorse;
 
+    public Sprite MuteCancel;
+    public Sprite MuteDone;
+
+    public GameObject Sound;
+
     private bool mute = false;
 
     private void Start()
@@ -16,6 +22,7 @@ public class PauseMenu : MonoBehaviour
         audioSorse = GetComponent<AudioSource>();
         audioSorse.clip = Song;
         audioSorse.Play();
+        Sound.GetComponent<Image>().sprite = MuteCancel;
     }
     public void PauseGame()
     {
@@ -38,11 +45,13 @@ public class PauseMenu : MonoBehaviour
         {
             audioSorse.Pause();
             mute = true;
+            Sound.GetComponent<Image>().sprite = MuteDone;
         }
         else if (mute)
         {
             audioSorse.Play();
             mute = false;
+            Sound.GetComponent<Image>().sprite = MuteCancel;
         }
     }
 }
