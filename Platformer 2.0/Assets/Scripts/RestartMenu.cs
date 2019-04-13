@@ -33,9 +33,9 @@ public class RestartMenu : MonoBehaviour
     {
         if (Player.deadscore % 5 == 0)
         {
-            if (Advertisement.IsReady("Video"))
+            if (Advertisement.IsReady(""))
             {
-                Advertisement.Show("Video");
+                Advertisement.Show("");
                 Player.deadscore++;
             }
         }

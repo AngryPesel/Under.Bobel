@@ -639,6 +639,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144750312}
   m_CullTransparentMesh: 0
+--- !u!1 &172093892 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8238796131527799149, guid: 0de8616620dc0154b9bf39457c449fd9,
+    type: 3}
+  m_PrefabInstance: {fileID: 860842477}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &198718790
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,7 +784,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 860842477}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 172093892}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -790,7 +796,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 860842477}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 172093892}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -1205,6 +1211,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dd0a543bd45fe94bb51fe5be1ac63d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BuyButton: {fileID: 21300002, guid: fecd96eae3ca85b4d91f8a0be1dc2c59, type: 3}
+  SelectButton: {fileID: 21300008, guid: fecd96eae3ca85b4d91f8a0be1dc2c59, type: 3}
+  OrangeButt: {fileID: 1012170003}
+  RainbowButt: {fileID: 172093892}
+  CandyButt: {fileID: 70124821}
+  CattyButt: {fileID: 1752559027}
+  DogButt: {fileID: 1109777776}
+  UnicButt: {fileID: 596288473}
+  DiverButt: {fileID: 1341672147}
+  BottlePremButt: {fileID: 721826125}
   rainbow_butt: {fileID: 217544053}
   catty_butt: {fileID: 2084377635}
   orange_butt: {fileID: 1012170005}
@@ -4038,6 +4054,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 3755146382143556639}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1752559027 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8238796131349225911, guid: 0de8616620dc0154b9bf39457c449fd9,
+    type: 3}
+  m_PrefabInstance: {fileID: 860842477}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1762563630
 GameObject:
   m_ObjectHideFlags: 0
@@ -4518,6 +4540,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dd0a543bd45fe94bb51fe5be1ac63d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BuyButton: {fileID: 21300002, guid: fecd96eae3ca85b4d91f8a0be1dc2c59, type: 3}
+  SelectButton: {fileID: 21300008, guid: fecd96eae3ca85b4d91f8a0be1dc2c59, type: 3}
+  OrangeButt: {fileID: 1012170003}
+  RainbowButt: {fileID: 172093892}
+  CandyButt: {fileID: 70124821}
+  CattyButt: {fileID: 1752559027}
+  DogButt: {fileID: 1109777776}
+  UnicButt: {fileID: 596288473}
+  DiverButt: {fileID: 1341672147}
+  BottlePremButt: {fileID: 721826125}
   rainbow_butt: {fileID: 217544053}
   catty_butt: {fileID: 2084377635}
   orange_butt: {fileID: 1012170005}
@@ -4814,7 +4846,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 860842477}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1752559027}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -4826,7 +4858,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 860842477}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1752559027}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}

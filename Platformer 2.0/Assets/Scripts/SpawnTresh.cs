@@ -47,7 +47,7 @@ public class SpawnTresh : MonoBehaviour
         scr = 0;
         numm = 10;
         k = 20;
-        det = 1;
+        det = 100;
         timeCup = intenciveCup;
         timeSilv = intenciveSilv;
         timeGold = intenciveGold;
