@@ -7,6 +7,9 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    /*public GameObject SelectBottle;
+    public GameObject SelectBottlePrem;*/
+
     public Sprite MuteCancel;
     public Sprite MuteDone;
 

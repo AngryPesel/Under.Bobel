@@ -8,12 +8,14 @@ public class Player : MonoBehaviour
     public GameObject restart;
     public GameObject pause;
     public GameObject Shild;
+    public GameObject ScoreCalcGO;
 
     public static bool ShildAct = false;
 
     public float PauseTime;
     public Text txt;
     public Text GemScore;
+    public Text ScoreCalc;
 
     public static bool CoinIn = false;
     public static bool lose = false;
@@ -37,6 +39,9 @@ public class Player : MonoBehaviour
 	public static int iteration;
 	public static bool isPause;
 
+    private float timeDisappers = 0.5f;
+    private float time = 0;
+
     private void Start()
     {
         RestartMenu.coef = 0;
@@ -47,6 +52,8 @@ public class Player : MonoBehaviour
 
         anim = GetComponent<Animator>();
         CoinUI = GetComponent<Animator>();
+        iteration = 0;
+        isPause = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -91,6 +98,9 @@ public class Player : MonoBehaviour
             Destroy(collision.gameObject);
             GetComponent<AudioSource>().clip = Coin;
             GetComponent<AudioSource>().Play();
+            ScoreCalcGO.SetActive(true);
+            time = timeDisappers;
+            ScoreCalc.text = "+" + SpawnTresh.det;
         }
         if (collision.gameObject.tag == "Coinsilv")
         {
@@ -101,6 +111,9 @@ public class Player : MonoBehaviour
             CoinIn = true;
             Invoke("TimeCoinIn", PauseTime);
             Destroy(collision.gameObject);
+            ScoreCalcGO.SetActive(true);
+            time = timeDisappers;
+            ScoreCalc.text = "+" + (SpawnTresh.det+1);
         }
         if (collision.gameObject.tag == "Coingold")
         {
@@ -111,6 +124,9 @@ public class Player : MonoBehaviour
             CoinIn = true;
             Invoke("TimeCoinIn", PauseTime);
             Destroy(collision.gameObject);
+            ScoreCalcGO.SetActive(true);
+            time = timeDisappers;
+            ScoreCalc.text = "+" + (SpawnTresh.det+2);
         }
         if (collision.gameObject.tag == "Coinevil")
         {
@@ -121,6 +137,9 @@ public class Player : MonoBehaviour
             CoinIn = true;
             Invoke("TimeCoinIn", PauseTime);
             Destroy(collision.gameObject);
+            ScoreCalcGO.SetActive(true);
+            time = timeDisappers;
+            ScoreCalc.text = "-" +(SpawnTresh.det * (-1));
         }
         if (collision.gameObject.tag == "Shild")
         {
@@ -164,6 +183,14 @@ public class Player : MonoBehaviour
 			restart.SetActive(false);
 			pause.SetActive(true);
 		}
-	}
+        if (time <= 0)
+        {
+            ScoreCalcGO.SetActive(false);
+        }
+        else
+        {
+            time -= Time.deltaTime;
+        }
+    }
 
 }
