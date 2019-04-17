@@ -10,10 +10,17 @@ public class PauseMenu : MonoBehaviour
     public AudioClip Song;
     private AudioSource audioSorse;
 
+	public static int iteration;
+
     public Sprite MuteCancel;
     public Sprite MuteDone;
 
+	/*public Sprite Replay;
+	public Sprite Continues;
+	public Sprite DubleGem;*/
+
     public GameObject Sound;
+	//public GameObject GemButton;
 
     private bool mute = false;
 
@@ -31,29 +38,20 @@ public class PauseMenu : MonoBehaviour
         {
             Time.timeScale = 0;
             pause = true;
+			Player.isPause = true;
         }
         else if (pause)
         {
             Time.timeScale = 1;
             pause = false;
-        }
+			Player.isPause = false;
+		}
 
     }
 
     public void Mute()
     {
-        /*if (!mute)
-        {
-            audioSorse.Pause();
-            mute = true;
-            Sound.GetComponent<Image>().sprite = MuteDone;
-        }
-        else if (mute)
-        {
-            audioSorse.Play();
-            mute = false;
-            Sound.GetComponent<Image>().sprite = MuteCancel;
-        }*/
+
         MainMenu.isMusic = !MainMenu.isMusic;
         setStateMusic(MainMenu.isMusic);
     }

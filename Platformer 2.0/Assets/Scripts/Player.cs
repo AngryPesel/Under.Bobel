@@ -34,6 +34,9 @@ public class Player : MonoBehaviour
     public AudioClip Magic;
     public AudioClip SpeadUp;
 
+	public static int iteration;
+	public static bool isPause;
+
     private void Start()
     {
         RestartMenu.coef = 0;
@@ -52,14 +55,26 @@ public class Player : MonoBehaviour
         {
             if (!ShildAct)
             {
-                anim.SetBool("Dead", true);
-                lose = true;
-                deadscore++;
-                restart.SetActive(true);
-                pause.SetActive(false);
-                GetComponent<AudioSource>().clip = Tresh;
-                GetComponent<AudioSource>().Play();
-            }
+				pause.SetActive(false);
+				isPause = true;
+				if (iteration == 0)
+				{
+					iteration++;
+					Destroy(collision.gameObject);
+					restart.SetActive(true);
+					Time.timeScale = 0;
+				}
+				else
+				{
+					anim.SetBool("Dead", true);
+					lose = true;
+					deadscore++;
+					restart.SetActive(true);
+					GetComponent<AudioSource>().clip = Tresh;
+					GetComponent<AudioSource>().Play();
+					iteration = 0;
+				}
+			}
             else
             {
                 Destroy(collision.gameObject);
@@ -143,7 +158,12 @@ public class Player : MonoBehaviour
         if (RestartMenu.coef == 0)
             GemScore.text = "" + gemScore;
         else GemScore.text = "" + gemScore * 2;
-
-    }
+		if (!isPause)
+		{
+			Time.timeScale = 1;
+			restart.SetActive(false);
+			pause.SetActive(true);
+		}
+	}
 
 }
