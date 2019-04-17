@@ -23,6 +23,7 @@ public class PauseMenu : MonoBehaviour
         audioSorse.clip = Song;
         audioSorse.Play();
         Sound.GetComponent<Image>().sprite = MuteCancel;
+        setStateMusic(MainMenu.isMusic);
     }
     public void PauseGame()
     {
@@ -41,7 +42,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Mute()
     {
-        if (!mute)
+        /*if (!mute)
         {
             audioSorse.Pause();
             mute = true;
@@ -52,6 +53,22 @@ public class PauseMenu : MonoBehaviour
             audioSorse.Play();
             mute = false;
             Sound.GetComponent<Image>().sprite = MuteCancel;
+        }*/
+        MainMenu.isMusic = !MainMenu.isMusic;
+        setStateMusic(MainMenu.isMusic);
+    }
+
+    void setStateMusic(bool isMusic)
+    {
+        if (isMusic)
+        {
+            audioSorse.Play();
+            Sound.GetComponent<Image>().sprite = MuteCancel;
+        }
+        else
+        {
+            audioSorse.Pause();
+            Sound.GetComponent<Image>().sprite = MuteDone;
         }
     }
 }
