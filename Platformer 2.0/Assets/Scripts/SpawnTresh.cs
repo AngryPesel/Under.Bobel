@@ -149,7 +149,7 @@ public class SpawnTresh : MonoBehaviour
             Instantiate(tresh, new Vector2(UnityEngine.Random.Range(-2.5f, 2.5f), 6f), Quaternion.identity);
             if (Player.Score >= Score1)
             {
-                spead = speed1 * 1.02f;
+                spead = speed1;
             }
             if (Player.Score >= Score2)
             {
@@ -157,7 +157,7 @@ public class SpawnTresh : MonoBehaviour
             }
             if (Player.Score >= Score3)
             {
-                spead = speed1 * 0.98f;
+                spead = speed1;
                 speed1 = spead;
                 n += 10;
                 Score1 = Score1 + n;
@@ -173,78 +173,78 @@ public class SpawnTresh : MonoBehaviour
 
     void createCoinCup()
     {
-        int i = UnityEngine.Random.Range(1, 4);
+        /*int i = UnityEngine.Random.Range(1, 4);
         if (i == 1)
             Instantiate(coincup, new Vector2(3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
         else if (i == 2)
             Instantiate(coincup, new Vector2(-3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
-        else if (i == 3)
+        else if (i == 3)*/
             Instantiate(coincup, new Vector2(UnityEngine.Random.Range(-2.5f, 2.5f), 6f), Quaternion.identity);
     }
 
     void createCoinSILV()
     {
-        int i = UnityEngine.Random.Range(1, 4);
+        /*int i = UnityEngine.Random.Range(1, 4);
         if (i == 1)
             Instantiate(coinsilv, new Vector2(3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
         else if (i == 2)
             Instantiate(coinsilv, new Vector2(-3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
-        else if (i == 3)
+        else if (i == 3)*/
             Instantiate(coinsilv, new Vector2(UnityEngine.Random.Range(-2.5f, 2.5f), 6f), Quaternion.identity);
     }
 
     void createCoinGold()
     {
-        int i = UnityEngine.Random.Range(1, 4);
+        /*int i = UnityEngine.Random.Range(1, 4);
         if (i == 1)
             Instantiate(coingold, new Vector2(3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
         else if (i == 2)
             Instantiate(coingold, new Vector2(-3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
-        else if (i == 3)
+        else if (i == 3)*/
             Instantiate(coingold, new Vector2(UnityEngine.Random.Range(-2.5f, 2.5f), 6f), Quaternion.identity);
     }
 
     void createCoinEVIL()
     {
-        int i = UnityEngine.Random.Range(1, 4);
+        /*int i = UnityEngine.Random.Range(1, 4);
         if (i == 1)
             Instantiate(coinevil, new Vector2(3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
         else if (i == 2)
             Instantiate(coinevil, new Vector2(-3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
-        else if (i == 3)
+        else if (i == 3)*/
             Instantiate(coinevil, new Vector2(UnityEngine.Random.Range(-2.5f, 2.5f), 6f), Quaternion.identity);
     }
 
     void createCoinSHILD()
     {
-        int i = UnityEngine.Random.Range(1, 4);
+        /*int i = UnityEngine.Random.Range(1, 4);
         if (i == 1)
             Instantiate(Shild, new Vector2(3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
         else if (i == 2)
             Instantiate(Shild, new Vector2(-3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
-        else if (i == 3)
+        else if (i == 3)*/
             Instantiate(Shild, new Vector2(UnityEngine.Random.Range(-2.5f, 2.5f), 6f), Quaternion.identity);
     }
 
     void createSpeedUP()
     {
-        int i = UnityEngine.Random.Range(1, 4);
+        /*int i = UnityEngine.Random.Range(1, 4);
         if (i == 1)
             Instantiate(SpeedUP, new Vector2(3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
         else if (i == 2)
             Instantiate(SpeedUP, new Vector2(-3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
-        else if (i == 3)
+        else if (i == 3)*/
             Instantiate(SpeedUP, new Vector2(UnityEngine.Random.Range(-2.5f, 2.5f), 6f), Quaternion.identity);
     }
 
     void createGem()
     {
-        int i = UnityEngine.Random.Range(1, 4);
+        /*int i = UnityEngine.Random.Range(1, 4);
         if (i == 1)
             Instantiate(Gem, new Vector2(3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
         else if (i == 2)
             Instantiate(Gem, new Vector2(-3f, UnityEngine.Random.Range(-4f, 4f)), Quaternion.identity);
-        else if (i == 3)
+        else if (i == 3)*/
             Instantiate(Gem, new Vector2(UnityEngine.Random.Range(-2.5f, 2.5f), 6f), Quaternion.identity);
     }
 }

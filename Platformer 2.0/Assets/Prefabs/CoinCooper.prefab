@@ -95,7 +95,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinSpeed: 4
-  side: 1
 --- !u!58 &6331230034129636907
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -125,7 +125,8 @@ public class RestartMenu : MonoBehaviour
             Invoke("Jopke", 0.2f);
 		iteration = 0;
 		Player.isPause = false;
-		}
+        //setStateMusic(MainMenu.isMusic);
+    }
 
     void Jopke()
     {

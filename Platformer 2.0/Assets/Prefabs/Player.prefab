@@ -101,12 +101,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restart: {fileID: 3477824624651974347, guid: bede96f07a15cd34686bc30c78323ec7, type: 3}
   pause: {fileID: 1127171665537727817, guid: 28fe86836745ec74ca508a07f5526d0a, type: 3}
+  Shild: {fileID: 0}
+  ScoreCalcGO: {fileID: 0}
   PauseTime: 0.001
   txt: {fileID: 3052766529330494483, guid: 0e35e3dd6ddb4bf40a5eb0cbe9860b0e, type: 3}
-  coin: {fileID: 5912924698624459449, guid: f08a93d0441fbf34e9d1a8b46e1ff5db, type: 3}
+  GemScore: {fileID: 0}
+  ScoreCalc: {fileID: 0}
   CoinUI: {fileID: 8822566796855446922, guid: f08a93d0441fbf34e9d1a8b46e1ff5db, type: 3}
   Tresh: {fileID: 8300000, guid: 39d61b9c9d200e6469dd024a1ec380f3, type: 3}
   Coin: {fileID: 8300000, guid: 3d3efcb97ddb91e4f94e90c89df460b8, type: 3}
+  CoinEvil: {fileID: 0}
+  ShildActive: {fileID: 0}
+  brocenGlass: {fileID: 0}
+  Magic: {fileID: 0}
+  SpeadUp: {fileID: 0}
 --- !u!50 &5655183929488546283
 Rigidbody2D:
   serializedVersion: 4
@@ -283,9 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff55c5cd50fdff6499f7f6aec061db72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LGBT_GG: {fileID: 21300000, guid: e7f9a25cba04e714fb2c86559fb41571, type: 3}
   Bobel_def: {fileID: 21300000, guid: f52d650c2a2693742974781b92dfe105, type: 3}
-  CattyBobel: {fileID: 21300000, guid: 6b2dca1cccda7cc44990da1b9ecdf590, type: 3}
 --- !u!114 &325545131123995573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,7 +304,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4062e9b470b25de43a9c74fead8803ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LGBT_GG: {fileID: 21300000, guid: e7f9a25cba04e714fb2c86559fb41571, type: 3}
-  Bobel_def: {fileID: 21300000, guid: f52d650c2a2693742974781b92dfe105, type: 3}
-  CattyBobel: {fileID: 21300000, guid: 6b2dca1cccda7cc44990da1b9ecdf590, type: 3}
   Ost: 0
+  Ost_Gem: 0
+  SelectBobel: {fileID: 0}
+  SelectOrange: {fileID: 0}
+  SelectRainbow: {fileID: 0}
+  SelectCandy: {fileID: 0}
+  SelectCat: {fileID: 0}
+  SelectDog: {fileID: 0}
+  SelectUnic: {fileID: 0}
+  SelectDiver: {fileID: 0}
+  SelectBottleDef: {fileID: 0}
+  SelectBottlePem: {fileID: 0}

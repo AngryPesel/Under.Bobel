@@ -36,10 +36,10 @@ public class PlayerControl : MonoBehaviour
             mousePos.x = mousePos.x > 2.5f ? 2.5f : mousePos.x;
             mousePos.x = mousePos.x < -2.5f ? -2.5f : mousePos.x;
 
-            mousePos.y = mousePos.y > 4.5f ? 4.5f : mousePos.y;
-            mousePos.y = mousePos.y < -4.5f ? -4.5f : mousePos.y;
+            /*mousePos.y = mousePos.y > 4.5f ? 4.5f : mousePos.y;
+            mousePos.y = mousePos.y < -4.5f ? -4.5f : mousePos.y;*/
 
-            player.position = Vector2.MoveTowards(player.position, new Vector2(mousePos.x, mousePos.y), speed * Time.deltaTime);
+            player.position = Vector2.MoveTowards(player.position, new Vector2(mousePos.x, -4/*mousePos.y*/), speed * Time.deltaTime);
         }
     }
 

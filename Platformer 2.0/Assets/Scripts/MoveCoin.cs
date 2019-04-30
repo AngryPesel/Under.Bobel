@@ -4,18 +4,18 @@ public class MoveCoin : MonoBehaviour
 {
     public float coinSpeed = 5f;
 
-    public Side side = Side.Left;
+    //public Side side = Side.Left;
 
-    public enum Side{
+    /*public enum Side{
         Left=1,
         Right,
         Up,
         Down
-    }
+    }*/
 
     void Start()
     {
-        if (transform.position.x == -3)
+        /*if (transform.position.x == -3)
         {
             side = Side.Left;
         }
@@ -26,23 +26,23 @@ public class MoveCoin : MonoBehaviour
         if (transform.position.y == 6)
         {
             side = Side.Up;
-        }
+        }*/
     }
 
     private void Update()
     {
-        if (transform.position.x < -3.5f)
+        /*if (transform.position.x < -3.5f)
             Destroy(gameObject);
         if (transform.position.x > 3.5f)
-            Destroy(gameObject);
+            Destroy(gameObject);*/
         if (transform.position.y < -6f)
             Destroy(gameObject);
-        switch (side)
+        /*switch (side)
         {
             case Side.Left: transform.position += new Vector3(coinSpeed * Time.deltaTime, 0, 0);  break;
             case Side.Right: transform.position -= new Vector3(coinSpeed * Time.deltaTime, 0, 0); break;
             case Side.Up: transform.position -= new Vector3(0, coinSpeed * Time.deltaTime,0); break; 
-        }
-      
+        }*/
+        transform.position -= new Vector3(0, coinSpeed * Time.deltaTime, 0);
     }
 }

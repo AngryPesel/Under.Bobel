@@ -69,7 +69,7 @@ public class Player : MonoBehaviour
 					iteration++;
 					Destroy(collision.gameObject);
 					restart.SetActive(true);
-					Time.timeScale = 0;
+                    Time.timeScale = 0;
 				}
 				else
 				{
@@ -87,6 +87,8 @@ public class Player : MonoBehaviour
                 Destroy(collision.gameObject);
                 GetComponent<AudioSource>().clip = brocenGlass;
                 GetComponent<AudioSource>().Play();
+                Shild.SetActive(false);
+                ShildAct = false;
             }
         }
         if (collision.gameObject.tag == "Coincup")

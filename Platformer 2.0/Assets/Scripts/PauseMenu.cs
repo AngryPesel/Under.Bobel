@@ -20,15 +20,25 @@ public class PauseMenu : MonoBehaviour
 	public Sprite DubleGem;*/
 
     public GameObject Sound;
-	//public GameObject GemButton;
+    public GameObject TutorialButt;
+    //public GameObject GemButton;
+
+    public static string Tutorial = "Tutorial";
+    public static int Tutorial_Cond;
 
     private bool mute = false;
 
     private void Start()
     {
-        audioSorse = GetComponent<AudioSource>();
-        audioSorse.clip = Song;
-        audioSorse.Play();
+        Tutorial_Cond = PlayerPrefs.GetInt(Tutorial);
+
+        if (Tutorial_Cond == 0)
+        {
+            TutorialButt.SetActive(true);
+            pause = true;
+            Player.isPause = true;
+        }
+
         Sound.GetComponent<Image>().sprite = MuteCancel;
         setStateMusic(MainMenu.isMusic);
     }
@@ -49,6 +59,15 @@ public class PauseMenu : MonoBehaviour
 
     }
 
+    public void TutorDone()
+    {
+        Player.isPause = false;
+        TutorialButt.SetActive(false);
+        pause = true;
+        Tutorial_Cond = 1;
+        PlayerPrefs.SetInt(Tutorial, Tutorial_Cond);
+    }
+
     public void Mute()
     {
 
@@ -56,17 +75,33 @@ public class PauseMenu : MonoBehaviour
         setStateMusic(MainMenu.isMusic);
     }
 
-    void setStateMusic(bool isMusic)
+    private void Update()
+    {
+       // if(audioSorse == null)
+        //setStateMusic(MainMenu.isMusic);
+    }
+
+    public void setStateMusic(bool isMusic)
     {
         if (isMusic)
         {
+            if (audioSorse == null) initMusic();
             audioSorse.Play();
             Sound.GetComponent<Image>().sprite = MuteCancel;
         }
         else
         {
+            if (audioSorse == null) initMusic();
             audioSorse.Pause();
             Sound.GetComponent<Image>().sprite = MuteDone;
         }
+    }
+
+    void initMusic()
+    {
+
+        audioSorse = GetComponent<AudioSource>();
+        audioSorse.clip = Song;
+        audioSorse.Play();
     }
 }

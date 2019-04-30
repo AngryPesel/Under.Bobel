@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class MoveTresh : MonoBehaviour
 {
-    float treshSpeed = 2f;
-    public float treshSpeed1 = 2f;
+    float treshSpeed = 3f;
+    public float treshSpeed1 = 3f;
 
     public int localScore1 = 10;
     public int localScore2 = 20;
@@ -16,7 +16,7 @@ public class MoveTresh : MonoBehaviour
 
         if (Player.Score >= localScore1)
         {
-            treshSpeed = treshSpeed1 * 0.95f;
+            treshSpeed = treshSpeed1 * 0.9f;
         }
         if (Player.Score >= localScore2)
         {
@@ -24,7 +24,7 @@ public class MoveTresh : MonoBehaviour
         }
         if (Player.Score >= localScore3)
         {
-            treshSpeed = treshSpeed1 * 1.02f;
+            treshSpeed = treshSpeed1 * 1.2f;
             treshSpeed1 = treshSpeed;
         }
 
