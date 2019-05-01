@@ -6,12 +6,13 @@ public class MoveCoin : MonoBehaviour
 
     //public Side side = Side.Left;
 
-    /*public enum Side{
-        Left=1,
-        Right,
-        Up,
-        Down
-    }*/
+    /*public enum Side
+       {
+            Left=1,
+            Right,
+            Up,
+            Down
+       }*/
 
     void Start()
     {
