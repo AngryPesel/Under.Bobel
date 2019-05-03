@@ -889,6 +889,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 325545131123995573, guid: 32c569a99b8b13f4fbce0484345b5d20,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7335791796944259851, guid: 32c569a99b8b13f4fbce0484345b5d20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -953,11 +958,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.27
-      objectReference: {fileID: 0}
-    - target: {fileID: 325545131123995573, guid: 32c569a99b8b13f4fbce0484345b5d20,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3124778445170120863, guid: 32c569a99b8b13f4fbce0484345b5d20,
         type: 3}
@@ -1718,6 +1718,16 @@ PrefabInstance:
         type: 3}
       propertyPath: MaxDistance
       value: 325.796
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127171665537727828, guid: 28fe86836745ec74ca508a07f5526d0a,
+        type: 3}
+      propertyPath: Mute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127171665537727828, guid: 28fe86836745ec74ca508a07f5526d0a,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28fe86836745ec74ca508a07f5526d0a, type: 3}
