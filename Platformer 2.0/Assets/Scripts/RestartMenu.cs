@@ -71,11 +71,13 @@ public class RestartMenu : MonoBehaviour
 
 				restartButton.SetActive(false);
 				menuButton.SetActive(false);
-				break;
+                Player.anim.SetBool("Dead", false);
+                break;
 			case 1:
 				GemADS.GetComponent<Image>().sprite = DubleGem;
 				Player.isPause = false;
-				restartButton.SetActive(true);
+                Player.anim.SetBool("Dead", false);
+                restartButton.SetActive(true);
 				menuButton.SetActive(true);
 				break;
 			case 2:

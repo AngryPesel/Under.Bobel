@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
 
     public static int deadscore = 1;
 
-    private Animator anim;
+    public static Animator anim;
     public Animator CoinUI;
 
     public AudioClip Tresh;
@@ -70,7 +70,10 @@ public class Player : MonoBehaviour
 					Destroy(collision.gameObject);
 					restart.SetActive(true);
 					Time.timeScale = 0;
-				}
+                    anim.SetBool("Dead", true);
+                    GetComponent<AudioSource>().clip = Tresh;
+                    GetComponent<AudioSource>().Play();
+                }
 				else
 				{
 					anim.SetBool("Dead", true);
@@ -139,7 +142,7 @@ public class Player : MonoBehaviour
             Destroy(collision.gameObject);
             ScoreCalcGO.SetActive(true);
             time = timeDisappers;
-            ScoreCalc.text = "-" +(SpawnTresh.det * (-1));
+            ScoreCalc.text = "-" +(SpawnTresh.det);
         }
         if (collision.gameObject.tag == "Shild")
         {
